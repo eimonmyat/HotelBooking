@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMaster.Master" AutoEventWireup="true" CodeBehind="Booking.aspx.cs" Inherits="HotelBooking.Booking" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:MultiView ID="MultiView1" runat="server">
-        <asp:View ID="View1" runat="server">
-
-            <div class="section-top-border">
+    
+    
+             <div class="section-top-border">
 
                 <h3 class="text-center">Check Availability</h3>
 
@@ -41,7 +41,8 @@
                         </tr>
                         <tr>
                             <td colspan="4" class="text-center">
-                                <asp:Button ID="btnChecking" runat="server" Text="Check" OnClick="btnChecking_Click" CssClass="boxed-btn3" />
+                                <a href="#offer">
+                                    <asp:Button ID="btnChecking" runat="server" Text="Check" OnClick="btnChecking_Click" CssClass="boxed-btn3" /></a>
                             </td>
                         </tr>
 
@@ -53,60 +54,62 @@
 
 
             <!-- form itself end -->
-
-        </asp:View>
-        <asp:View ID="View2" runat="server">
             <!-- offers_area_start -->
-            <div>
+            <div id="offer">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="section_title text-center mb-100">
                                 <span></span>
                                 <h3>Ongoing Offers</h3>
+                                <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                             </div>
                         </div>
                     </div>
 
                     <div class="row" height="00">
-                        
+
                         <asp:DataList ID="RoomNumberList" runat="server" DataKeyField="RoomID" RepeatColumns="3" RepeatDirection="Horizontal" OnSelectedIndexChanged="RoomNumberList_SelectedIndexChanged">
                             <ItemTemplate>
-                        
+
                                 <div class="col-xl-4 col-md-4">
                                     <div class="single_offers">
                                         <div class="about_thumb">
                                             <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("RoomImage")%>' Height="400" Width="350" />
                                         </div>
+
                                         
-                                           <asp:Label ID="lblRoomID" runat="server" Text='<%#Eval("RoomID")%>' Visible="False"></asp:Label>
                                         <ul>
                                             <li>
-                                                 <asp:Label ID="RoomType" runat="server" Text='<%#Eval("RoomTypeID")%>' ></asp:Label>
+                                                <asp:Label ID="RoomType" runat="server" Text='<%#Eval("RoomTypeID")%>'></asp:Label>
                                             </li>
-                                            <li>
-                                                <asp:Label ID="Detail" runat="server" Text='<%#Eval("Description")%>' ></asp:Label>
+                                            <%--<li>
+                                                <asp:Label ID="Detail" runat="server" Text='<%#Eval("Description")%>'></asp:Label>
 
-                                            </li>
-                                            
+                                            </li>--%>
+
                                             <li>
                                                 <asp:Label ID="Price" runat="server" Text='<%#Eval("Price")%>'></asp:Label></li>
-                                            <li>
-                                                <asp:TextBox ID="txtRoomCount" runat="server" TextMode="Number"></asp:TextBox></li>
+                                            <%--<li>
+                                                <asp:TextBox ID="txtRoomCount" runat="server" TextMode="Number"></asp:TextBox></li>--%>
                                         </ul>
                                         <br />
-                                        <%--<asp:Button ID="btnBook" runat="server" Text="Book" CssClass="book_now" CommandName="Select" />--%>
-                                        <asp:LinkButton ID="btnBooking" runat="server" Text="Book" CssClass="book_now" CommandName="Select"></asp:LinkButton>
                                         
+                                        <asp:LinkButton ID="btnBooking" runat="server" Text="Detail" CssClass="book_now" CommandName="Select"></asp:LinkButton>
+
                                     </div>
                                 </div>
                             </ItemTemplate>
                         </asp:DataList>
-                       
+
                     </div>
                 </div>
             </div>
             <!-- offers_area_end -->
+    <br />
+    <br />
+    <div class="text-center"><asp:Button ID="btnConfirmBooking" runat="server" Text="Continue to Booking Page" OnClick="btnConfirmBooking_Click" /></div>
+    
             <!-- forQuery_start -->
             <div class="forQuery">
                 <div class="container">
@@ -176,6 +179,10 @@
                 </div>
             </div>
             <!-- instragram_area_end -->
-        </asp:View>
-    </asp:MultiView>
+       
+
+           
+        
+       
+    
 </asp:Content>

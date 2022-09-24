@@ -11,26 +11,8 @@ namespace HotelBooking
 {
 
 
-    public partial class Book
+    public partial class Booking
     {
-
-        /// <summary>
-        /// MultiView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiView1;
-
-        /// <summary>
-        /// View1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
 
         /// <summary>
         /// Label1 control.
@@ -114,13 +96,13 @@ namespace HotelBooking
         protected global::System.Web.UI.WebControls.Button btnChecking;
 
         /// <summary>
-        /// View2 control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
         /// RoomNumberList control.
@@ -130,5 +112,14 @@ namespace HotelBooking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList RoomNumberList;
+
+        /// <summary>
+        /// btnConfirmBooking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmBooking;
     }
 }

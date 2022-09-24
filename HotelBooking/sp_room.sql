@@ -134,3 +134,14 @@ select Row_Number()Over(Order By RoomID) As No,RoomID from BookingDetail where
 StartDate>@StartDate and EndDate>@StartDate and StartDate<@EndDate and EndDate<@EndDate
 end
 go
+
+
+create procedure sp_Room_Select_By_RoomID
+@RoomID int
+
+
+as 
+begin
+select Row_Number()Over(Order By RoomNumber) As No, * from vi_Room where RoomID=@RoomID Order By RoomNumber
+end
+go

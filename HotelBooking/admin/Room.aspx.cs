@@ -11,6 +11,7 @@ namespace HotelBooking.admin
 {
     public partial class Room : System.Web.UI.Page
     {
+       
         MainDatasetTableAdapters.RoomTableAdapter RoomTbl = new MainDatasetTableAdapters.RoomTableAdapter();
         MainDatasetTableAdapters.RoomTypeTableAdapter RoomTypeTbl = new MainDatasetTableAdapters.RoomTypeTableAdapter();
         DataTable Dt = new DataTable();
