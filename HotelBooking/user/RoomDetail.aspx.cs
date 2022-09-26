@@ -56,23 +56,23 @@ namespace HotelBooking.user
                 DataRow[] DrArray = Tbl.Select("RoomID='" + Session["RoomID"] + "'");
                 foreach (DataRow Dr in DrArray)
                 {
-                    Dr[1] = Convert.ToInt32(Dr[1]) + Convert.ToInt32(txtQty.Text);//qty
+                    Dr[1] = Convert.ToInt32(Dr[1]) + 1;//qty
                     Tbl.AcceptChanges();
                     Session["TempTbl"] = Tbl;
-                    Response.Redirect("Booking.aspx");
+                    Response.Redirect("ReserveList.aspx");
                     return;
                 }
             }
 
             TblDr = Tbl.NewRow();
             TblDr[0] = Session["RoomID"];//proid=user choose productid 1002 or 2004
-            TblDr[1] = txtQty.Text;//qty=1
+            TblDr[1] = 1;//qty=1
             Tbl.Rows.Add(TblDr);
             //tbl data table has one row(user choose proid, 1)
 
             Session["TempTbl"] = Tbl;//proid,qty
                                      //session tempTbl=tbl data table has one row
-            Response.Redirect("Booking.aspx");
+            Response.Redirect("ReserveList.aspx");
         }
     }
 }

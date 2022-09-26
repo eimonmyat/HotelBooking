@@ -16,21 +16,23 @@ end
 go
 
 create procedure sp_roomType_Insert
-@RoomTypeName varchar(50)
+@RoomTypeName varchar(50),
+@Quantity int
 
 as 
 begin
-insert into RoomType(RoomTypeName) values (@RoomTypeName)
+insert into RoomType(RoomTypeName,Quantity) values (@RoomTypeName,@Quantity)
 end
 go
 
 create procedure sp_roomType_Update
 @RoomTypeID int,
-@RoomTypeName varchar(50)
+@RoomTypeName varchar(50),
+@Quantity int
 
 as 
 begin
-update RoomType set RoomTypeName=@RoomTypeName where RoomTypeID=@RoomTypeID
+update RoomType set RoomTypeName=@RoomTypeName,Quantity=@Quantity where RoomTypeID=@RoomTypeID
 end
 go
 

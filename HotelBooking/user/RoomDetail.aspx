@@ -46,10 +46,10 @@
                                     <asp:Label ID="lblDescription" runat="server" Text="Label"></asp:Label>
                                 </td>
                             </tr>
-                            <tr>
+                           <%-- <tr>
                                 <td colspan="2">
                                     <asp:TextBox ID="txtQty" runat="server" TextMode="Number"></asp:TextBox></td>
-                            </tr>
+                            </tr>--%>
                             <tr>
                                 <td>
                                     <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click" />

@@ -36,7 +36,7 @@
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <asp:Button runat="server" Text="Log In and Confirm Booking" ID="btnLogIn" CssClass="form button" ForeColor="Black" />
+                                                <asp:Button runat="server" Text="Log In and Confirm Booking" ID="btnLogIn" CssClass="form button" ForeColor="Black" OnClick="btnLogIn_Click" />
                                             </td>
                                         </tr>
                                         <tr class="text-center">
@@ -70,21 +70,21 @@
                                             <td>Address : 
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="Address" runat="server" Width="200"></asp:TextBox>
+                                                <asp:TextBox ID="txtAddress" runat="server" Width="200"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Phone : 
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="Phone" runat="server" Width="200" TextMode="Phone"></asp:TextBox>
+                                                <asp:TextBox ID="txtPhone" runat="server" Width="200" TextMode="Phone"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Email : 
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="Email" runat="server" Width="200" TextMode="Email"></asp:TextBox>
+                                                <asp:TextBox ID="txtEmail" runat="server" Width="200" TextMode="Email"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
@@ -104,7 +104,8 @@
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <asp:Button ID="btnConfirm" runat="server" Text="Confirm Booking" />
+                                                <asp:Button ID="btnConfirm" runat="server" Text="Save and Confirm Booking" OnClick="btnConfirm_Click" />
+                                                <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
                                             </td>
                                         </tr>
                                     </table>
@@ -125,10 +126,29 @@
                             <asp:TextBox ID="TextBox1" runat="server" Visible="False"></asp:TextBox>
                             <table style="color: #000000; border-width: medium; text-align: left;" class="table">
                                 <tr>
-                                    <th colspan="2" style="text-align: center">Booking Details
+                                    <th style="text-align: center">Booking Details
                                     </th>
                                 </tr>
                                 <tr>
+                                    <td>
+                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                                            <Columns>
+                                                <asp:BoundField DataField="No" HeaderText="No" />
+                                                <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" />
+                                                <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" />
+                                                <asp:BoundField DataField="Price" HeaderText="Price" />
+                                                <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                                            </Columns>
+                                            
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:right">
+                                       Total Price : <asp:Label ID="lblTotalPrice" runat="server"></asp:Label>
+                                    </td>
+                                </tr>
+                                <%--<tr>
                                     <td>Room Type</td>
                                     <td>
                                         <asp:Label runat="server" Text="Label" ID="lblRoomType"></asp:Label>
@@ -151,7 +171,7 @@
                                     <td>
                                         <asp:Button runat="server" Text="Change" ID="btnChange" />
                                     </td>
-                                </tr>
+                                </tr>--%>
                             </table>
                         </div>
 

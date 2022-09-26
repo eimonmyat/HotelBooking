@@ -14,6 +14,7 @@
                         <tr>
                             <td>
                                 <asp:Label ID="Label1" runat="server" Text="Start Date:"></asp:Label>
+                                
                             </td>
                             <td>
                                 <asp:TextBox ID="txtStartDate" runat="server" TextMode="Date"></asp:TextBox>
@@ -25,7 +26,7 @@
                                 <asp:TextBox ID="txtEndDate" runat="server" TextMode="Date"></asp:TextBox>
                             </td>
                         </tr>
-                        <tr>
+                        <%--<tr>
                             <td>
                                 <asp:Label ID="Label3" runat="server" Text="Person :"></asp:Label>
                             </td>
@@ -38,7 +39,7 @@
                             <td>
                                 <asp:TextBox ID="txtRoom" runat="server" TextMode="Number"></asp:TextBox>
                             </td>
-                        </tr>
+                        </tr>--%>
                         <tr>
                             <td colspan="4" class="text-center">
                                 <a href="#offer">

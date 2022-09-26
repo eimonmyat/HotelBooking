@@ -31,6 +31,7 @@
                                     <asp:BoundField DataField="No" HeaderText="No" />
                                     <asp:BoundField DataField="RoomTypeID" HeaderText="RoomTypeID" Visible="False" />
                                     <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type Name" />
+                                    <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
                                     <asp:TemplateField HeaderText="Select">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="btnEdit" runat="server" CommandName="Select">
@@ -66,6 +67,16 @@
                     </td>
                     <td>
                         <asp:TextBox ID="txtRoomTypeName" runat="server" Width="200"></asp:TextBox>
+                        
+                    </td>
+                </tr>
+                    <tr>
+                    <td>
+                        Quantity : 
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtQuantity" runat="server" Width="200"></asp:TextBox>
+                        
                     </td>
                 </tr>
                 

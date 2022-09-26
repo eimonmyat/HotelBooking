@@ -262,7 +262,7 @@
     <Compile Include="admin\roomType.aspx.designer.cs">
       <DependentUpon>roomType.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MainDataset1.Designer.cs">
+    <Compile Include="MainDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainDataset.xsd</DependentUpon>
@@ -363,7 +363,7 @@
     <None Include="MainDataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MainDataset1.Designer.cs</LastGenOutput>
+      <LastGenOutput>MainDataset.Designer.cs</LastGenOutput>
     </None>
     <Content Include="MainDataset.xss">
       <DependentUpon>MainDataset.xsd</DependentUpon>

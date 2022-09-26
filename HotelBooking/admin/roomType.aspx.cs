@@ -24,6 +24,7 @@ namespace HotelBooking.admin
             DtDisplay.Columns.Add("No");
             DtDisplay.Columns.Add("RoomTypeID");
             DtDisplay.Columns.Add("RoomTypeName");
+            DtDisplay.Columns.Add("Quantity");
 
             Dr = DtDisplay.NewRow();
             DtDisplay.Rows.Add(Dr);
@@ -38,6 +39,7 @@ namespace HotelBooking.admin
                     Dr[0] = Dt.Rows[i][0];
                     Dr[1] = Dt.Rows[i][1];
                     Dr[2] = Dt.Rows[i][2];
+                    Dr[3] = Dt.Rows[i][3];
                     DtDisplay.Rows.Add(Dr);
                 }
             }
@@ -56,6 +58,7 @@ namespace HotelBooking.admin
             MultiView1.ActiveViewIndex = 1;
             btnSave.Text = "Save";
             txtRoomTypeName.Text = "";
+            txtQuantity.Text = "";
             txtRoomTypeName.Focus();
         }
         protected void btnSave_Click(object sender, EventArgs e)
@@ -66,6 +69,12 @@ namespace HotelBooking.admin
             {
                 lblError2.Text = "Please Enter Category Name";
                 txtRoomTypeName.Focus();
+                MultiView1.ActiveViewIndex = 1;
+            }
+            else if (txtQuantity.Text.Trim().ToString() == string.Empty)
+            {
+                lblError2.Text = "Please Enter Quantity";
+                txtQuantity.Focus();
                 MultiView1.ActiveViewIndex = 1;
             }
             else
@@ -83,11 +92,11 @@ namespace HotelBooking.admin
                 }
                 if (btnSave.Text == "Save")
                 {
-                    RoomTypeTbl.RoomType_Insert(txtRoomTypeName.Text);
+                    RoomTypeTbl.RoomType_Insert(txtRoomTypeName.Text,Convert.ToInt32(txtQuantity.Text));
                 }
                 else
                 {
-                    RoomTypeTbl.RoomType_Update(Convert.ToInt32(txtRoomTypeID.Text), txtRoomTypeName.Text);
+                    RoomTypeTbl.RoomType_Update(Convert.ToInt32(txtRoomTypeID.Text), txtRoomTypeName.Text, Convert.ToInt32(txtQuantity.Text));
                 }
                 txtRoomTypeID.Text = "";
                 Response.Redirect("RoomType.aspx");
@@ -99,6 +108,7 @@ namespace HotelBooking.admin
 
             txtRoomTypeID.Text = DtDisplay.Rows[RowIndex][1].ToString();
             txtRoomTypeName.Text = DtDisplay.Rows[RowIndex][2].ToString();
+            txtQuantity.Text = DtDisplay.Rows[RowIndex][3].ToString();
             GridViewRow Row = GridView1.Rows[RowIndex];
             CheckBox chkSelect = (CheckBox)Row.FindControl("chkSelect");
             chkSelect.Checked = true;
