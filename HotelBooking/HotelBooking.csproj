@@ -68,8 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\admin.aspx" />
+    <Content Include="admin\BookingList.aspx" />
+    <Content Include="admin\Check.aspx" />
     <Content Include="admin\Room.aspx" />
     <Content Include="admin\roomType.aspx" />
+    <Content Include="img\calendar.png" />
     <Content Include="user\Booking.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -247,6 +250,20 @@
     </Compile>
     <Compile Include="admin\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\BookingList.aspx.cs">
+      <DependentUpon>BookingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\BookingList.aspx.designer.cs">
+      <DependentUpon>BookingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Check.aspx.cs">
+      <DependentUpon>Check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Check.aspx.designer.cs">
+      <DependentUpon>Check.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Room.aspx.cs">
       <DependentUpon>Room.aspx</DependentUpon>

@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    
-             <div class="section-top-border">
+    <%--<asp:MultiView ID="MultiView1" runat="server">
+        <asp:View ID="View1" runat="server">--%>
+            <div class="section-top-border">
 
                 <h3 class="text-center">Check Availability</h3>
 
@@ -17,13 +17,18 @@
                                 
                             </td>
                             <td>
-                                <asp:TextBox ID="txtStartDate" runat="server" TextMode="Date"></asp:TextBox>
+                                <asp:TextBox ID="txtStartDate" runat="server"></asp:TextBox>
+                                <asp:ImageButton ID="Image2" runat="server" ImageUrl="../img/calendar.png" Height="36px" Width="36px" ImageAlign="AbsBottom" OnClick="Image2_Click" />
+                                <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
+
                             </td>
                             <td>
                                 <asp:Label ID="Label2" runat="server" Text="End Date :"></asp:Label>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtEndDate" runat="server" TextMode="Date"></asp:TextBox>
+                                <asp:TextBox ID="txtEndDate" runat="server"></asp:TextBox>
+                                <asp:ImageButton ID="Image3" runat="server" ImageUrl="../img/calendar.png" Height="36px" Width="36px" ImageAlign="AbsBottom" OnClick="Image3_Click" />
+                                <asp:Calendar ID="Calendar2" runat="server" OnDayRender="Calendar2_DayRender" OnSelectionChanged="Calendar2_SelectionChanged"></asp:Calendar>
                             </td>
                         </tr>
                         <%--<tr>
@@ -44,6 +49,8 @@
                             <td colspan="4" class="text-center">
                                 <a href="#offer">
                                     <asp:Button ID="btnChecking" runat="server" Text="Check" OnClick="btnChecking_Click" CssClass="boxed-btn3" /></a>
+                                <%--<asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>--%>
                             </td>
                         </tr>
 
@@ -51,10 +58,10 @@
                 </div>
 
             </div>
+       <%-- </asp:View>
 
-
-
-            <!-- form itself end -->
+        <asp:View ID="View2" runat="server">--%>
+             <!-- form itself end -->
             <!-- offers_area_start -->
             <div id="offer">
                 <div class="container">
@@ -63,7 +70,7 @@
                             <div class="section_title text-center mb-100">
                                 <span></span>
                                 <h3>Ongoing Offers</h3>
-                                <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -107,9 +114,14 @@
                 </div>
             </div>
             <!-- offers_area_end -->
-    <br />
-    <br />
-    <div class="text-center"><asp:Button ID="btnConfirmBooking" runat="server" Text="Continue to Booking Page" OnClick="btnConfirmBooking_Click" /></div>
+        <%--</asp:View>
+    </asp:MultiView>--%>
+    
+             
+
+
+
+           
     
             <!-- forQuery_start -->
             <div class="forQuery">

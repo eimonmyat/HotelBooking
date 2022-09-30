@@ -28,25 +28,25 @@ namespace HotelBooking.user
         DataTable Dt = new DataTable();
         protected void btnLogIn_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text.Trim().ToString() == string.Empty)
+            if (txtCustomerEmail.Text.Trim().ToString() == string.Empty)
             {
                 lblError.Text = "Please Enter Email";
-                txtEmail.Focus();
+                txtCustomerEmail.Focus();
             }
-            else if (txtEmail.Text.Contains(".") == false || txtEmail.Text.Contains("@") == false)
+            else if (txtCustomerEmail.Text.Contains(".") == false || txtCustomerEmail.Text.Contains("@") == false)
             {
                 lblError.Text = "Please Type Correct Email Format";
-                txtEmail.Focus();
+                txtCustomerEmail.Focus();
             }
-            else if (txtPassword.Text.Trim().ToString() == string.Empty)
+            else if (txtCustomerPassword.Text.Trim().ToString() == string.Empty)
             {
                 lblError.Text = "Please Enter Password";
-                txtPassword.Focus();
+                txtCustomerPassword.Focus();
             }
             else
             {
                
-                Dt = CustomerTbl.Customer_Select_For_LogIn(txtEmail.Text, txtPassword.Text);
+                Dt = CustomerTbl.Customer_Select_For_LogIn(txtCustomerEmail.Text, txtCustomerPassword.Text);
                 if (Dt.Rows.Count > 0)
                 {
                     int CustID = Convert.ToInt32(Dt.Rows[0][1].ToString());
@@ -56,7 +56,7 @@ namespace HotelBooking.user
                     int Index = 0;
                     foreach (GridViewRow Row in GridView1.Rows)
                     {
-                        BookingDetailTbl.BookingDetail_Insert(BookingID, Convert.ToInt32(Dt1.Rows[Index][0].ToString()), DateTime.Parse(Session["StartDate"].ToString()), DateTime.Parse(Session["EndDate"].ToString()));
+                        BookingDetailTbl.BookingDetail_Insert(BookingID, Convert.ToInt32(Dt1.Rows[Index][0].ToString()), Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
                         //8,57,700000,2
                         //8,86,5500,10
                         //8,12,900000,1
@@ -159,11 +159,13 @@ namespace HotelBooking.user
                     
                 }
                 int RowIndex = BookingTbl.GetData().Rows.Count;//8
+  
                 int BookingID = Convert.ToInt32(BookingTbl.GetData().Rows[RowIndex - 1][0].ToString());
+                //Label1.Text = BookingID.ToString();
                 int Index = 0;
                 foreach (GridViewRow Row in GridView1.Rows)
                 {
-                    BookingDetailTbl.BookingDetail_Insert(BookingID, Convert.ToInt32(Dt1.Rows[Index][0].ToString()), DateTime.Parse(Session["StartDate"].ToString()), DateTime.Parse(Session["EndDate"].ToString()));
+                    BookingDetailTbl.BookingDetail_Insert(BookingID, Convert.ToInt32(Dt1.Rows[Index][0].ToString()), Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
                     //8,57,700000,2
                     //8,86,5500,10
                     //8,12,900000,1
