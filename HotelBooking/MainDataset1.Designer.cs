@@ -2576,6 +2576,8 @@ namespace HotelBooking {
             
             private global::System.Data.DataColumn columnNotiStatus;
             
+            private global::System.Data.DataColumn columnEmail;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Admin_BookingDataTable() {
@@ -2683,6 +2685,14 @@ namespace HotelBooking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EmailColumn {
+                get {
+                    return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2718,7 +2728,7 @@ namespace HotelBooking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Admin_BookingRow AddAdmin_BookingRow(long No, int BookingID, System.DateTime BookingDate, int RoomID, int CustID, string CustName, int TotalAmount, string CheckStatus, string NotiStatus) {
+            public Admin_BookingRow AddAdmin_BookingRow(long No, int BookingID, System.DateTime BookingDate, int RoomID, int CustID, string CustName, int TotalAmount, string CheckStatus, string NotiStatus, string Email) {
                 Admin_BookingRow rowAdmin_BookingRow = ((Admin_BookingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         No,
@@ -2729,7 +2739,8 @@ namespace HotelBooking {
                         CustName,
                         TotalAmount,
                         CheckStatus,
-                        NotiStatus};
+                        NotiStatus,
+                        Email};
                 rowAdmin_BookingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAdmin_BookingRow);
                 return rowAdmin_BookingRow;
@@ -2768,6 +2779,7 @@ namespace HotelBooking {
                 this.columnTotalAmount = base.Columns["TotalAmount"];
                 this.columnCheckStatus = base.Columns["CheckStatus"];
                 this.columnNotiStatus = base.Columns["NotiStatus"];
+                this.columnEmail = base.Columns["Email"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2791,6 +2803,8 @@ namespace HotelBooking {
                 base.Columns.Add(this.columnCheckStatus);
                 this.columnNotiStatus = new global::System.Data.DataColumn("NotiStatus", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNotiStatus);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBookingID}, true));
                 this.columnNo.ReadOnly = true;
@@ -2804,6 +2818,8 @@ namespace HotelBooking {
                 this.columnTotalAmount.AllowDBNull = false;
                 this.columnCheckStatus.MaxLength = 50;
                 this.columnNotiStatus.MaxLength = 5;
+                this.columnEmail.AllowDBNull = false;
+                this.columnEmail.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2953,6 +2969,8 @@ namespace HotelBooking {
             
             private global::System.Data.DataColumn columnStatus;
             
+            private global::System.Data.DataColumn columnPrice;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Admin_BookingDetailDataTable() {
@@ -3052,6 +3070,14 @@ namespace HotelBooking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PriceColumn {
+                get {
+                    return this.columnPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3087,7 +3113,7 @@ namespace HotelBooking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Admin_BookingDetailRow AddAdmin_BookingDetailRow(long No, int BookingID, int RoomID, string RoomNumber, string RoomTypeName, System.DateTime StartDate, System.DateTime EndDate, string Status) {
+            public Admin_BookingDetailRow AddAdmin_BookingDetailRow(long No, int BookingID, int RoomID, string RoomNumber, string RoomTypeName, System.DateTime StartDate, System.DateTime EndDate, string Status, int Price) {
                 Admin_BookingDetailRow rowAdmin_BookingDetailRow = ((Admin_BookingDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         No,
@@ -3097,7 +3123,8 @@ namespace HotelBooking {
                         RoomTypeName,
                         StartDate,
                         EndDate,
-                        Status};
+                        Status,
+                        Price};
                 rowAdmin_BookingDetailRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAdmin_BookingDetailRow);
                 return rowAdmin_BookingDetailRow;
@@ -3128,6 +3155,7 @@ namespace HotelBooking {
                 this.columnStartDate = base.Columns["StartDate"];
                 this.columnEndDate = base.Columns["EndDate"];
                 this.columnStatus = base.Columns["Status"];
+                this.columnPrice = base.Columns["Price"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3149,6 +3177,8 @@ namespace HotelBooking {
                 base.Columns.Add(this.columnEndDate);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
                 this.columnNo.ReadOnly = true;
                 this.columnBookingID.AllowDBNull = false;
                 this.columnRoomID.AllowDBNull = false;
@@ -3159,6 +3189,7 @@ namespace HotelBooking {
                 this.columnStartDate.AllowDBNull = false;
                 this.columnEndDate.AllowDBNull = false;
                 this.columnStatus.MaxLength = 20;
+                this.columnPrice.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4401,6 +4432,17 @@ namespace HotelBooking {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Email {
+                get {
+                    return ((string)(this[this.tableAdmin_Booking.EmailColumn]));
+                }
+                set {
+                    this[this.tableAdmin_Booking.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNoNull() {
                 return this.IsNull(this.tableAdmin_Booking.NoColumn);
             }
@@ -4545,6 +4587,17 @@ namespace HotelBooking {
                 }
                 set {
                     this[this.tableAdmin_BookingDetail.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Price {
+                get {
+                    return ((int)(this[this.tableAdmin_BookingDetail.PriceColumn]));
+                }
+                set {
+                    this[this.tableAdmin_BookingDetail.PriceColumn] = value;
                 }
             }
             
@@ -7109,7 +7162,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.sp_booking_select_all";
@@ -7117,26 +7170,32 @@ namespace HotelBooking.MainDatasetTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "dbo.sp_booking_insert";
+            this._commandCollection[1].CommandText = "dbo.sp_Booking_Cust_NotiStatus_Update";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalAmount", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CheckStatus", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "dbo.sp_booking_NotiStatus_Update";
+            this._commandCollection[2].CommandText = "dbo.sp_booking_insert";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotiStatus", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalAmount", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CheckStatus", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "dbo.sp_booking_select_by_notistatus";
+            this._commandCollection[3].CommandText = "dbo.sp_booking_NotiStatus_Update";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotiStatus", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "dbo.sp_booking_select_by_notistatus";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7168,7 +7227,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy(MainDataset.BookingDataTable dataTable, global::System.Nullable<int> CustID) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((CustID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(CustID.Value));
             }
@@ -7187,7 +7246,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual MainDataset.BookingDataTable Booking_Select_By_NotiStatus(global::System.Nullable<int> CustID) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((CustID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(CustID.Value));
             }
@@ -7202,8 +7261,36 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Booking_Insert(global::System.Nullable<global::System.DateTime> BookingDate, global::System.Nullable<int> CustID, global::System.Nullable<int> TotalAmount, string CheckStatus) {
+        public virtual int Booking_Cust_NotiStatus_Update(global::System.Nullable<int> CustID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((CustID.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(CustID.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Booking_Insert(global::System.Nullable<global::System.DateTime> BookingDate, global::System.Nullable<int> CustID, global::System.Nullable<int> TotalAmount, string CheckStatus) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((BookingDate.HasValue == true)) {
                 command.Parameters[1].Value = ((System.DateTime)(BookingDate.Value));
             }
@@ -7249,7 +7336,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Booking_NotiStatus_Update(global::System.Nullable<int> BookingID, string NotiStatus) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((BookingID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(BookingID.Value));
             }
@@ -7637,6 +7724,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
             tableMapping.ColumnMappings.Add("TotalAmount", "TotalAmount");
             tableMapping.ColumnMappings.Add("CheckStatus", "CheckStatus");
             tableMapping.ColumnMappings.Add("NotiStatus", "NotiStatus");
+            tableMapping.ColumnMappings.Add("Email", "Email");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7650,7 +7738,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[9];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[10];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.sp_admin_booking_select_all";
@@ -7704,6 +7792,12 @@ namespace HotelBooking.MainDatasetTableAdapters {
             this._commandCollection[8].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalAmount", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "dbo.sp_Admin_Booking_Select_By_CustID";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7973,6 +8067,42 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy7(MainDataset.Admin_BookingDataTable dataTable, global::System.Nullable<int> CustID) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((CustID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(CustID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MainDataset.Admin_BookingDataTable Admin_Booking_Select_By_CustID(global::System.Nullable<int> CustID) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((CustID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(CustID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            MainDataset.Admin_BookingDataTable dataTable = new MainDataset.Admin_BookingDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Admin_Booking_Update(global::System.Nullable<int> BookingID, string CheckStatus) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((BookingID.HasValue == true)) {
@@ -8134,6 +8264,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
             tableMapping.ColumnMappings.Add("StartDate", "StartDate");
             tableMapping.ColumnMappings.Add("EndDate", "EndDate");
             tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("Price", "Price");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8521,7 +8652,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MainDataset.Admin_Booking_ReportDataTable Admin_Booking_Select_By_CheckStatus(string CheckStatus) {
+        public virtual MainDataset.Admin_Booking_ReportDataTable Admin_Booking_Report_Select_By_CheckStatus(string CheckStatus) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((CheckStatus == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -8557,7 +8688,7 @@ namespace HotelBooking.MainDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual MainDataset.Admin_Booking_ReportDataTable Admin_Booking_Select_By_Email(string Email) {
+        public virtual MainDataset.Admin_Booking_ReportDataTable Admin_Booking_Report_Select_By_Email(string Email) {
             this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((Email == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;

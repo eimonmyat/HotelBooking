@@ -1,10 +1,10 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="HotelBooking.UserMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Book.master.cs" Inherits="HotelBooking.Book" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <meta charset="utf-8">
+     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Montana</title>
     <meta name="description" content="">
@@ -41,11 +41,14 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a class="active" href="rooms.html">rooms</a></li>
+                                         <li><a class="active" href="index.aspx">home</a></li>
+                                        <li><a href="CustomerLogIn.aspx">Log In</a></li>
+                                        <li><a href="Booking.aspx">rooms</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="contact.html">my bookings</a></li>
-                                        <li><a href="contact.html">log out</a></li>
+                                         <li><a href="contact.aspx">Contact</a></li>
+                                        <li><a href="UserBookingList.aspx">
+                                            <asp:Image ID="imgMessage" runat="server" Visible="False" ImageUrl="~/img/shad.ico" Height="13" />
+                                            Booking List</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -96,15 +99,11 @@
         <h3>Laxaries Rooms</h3>
     </div>
     <!-- bradcam_area_end -->
-    
     <form id="form1" runat="server">
-
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <!-- footer -->
-    
     </form>
     <footer class="footer" >
         <div class="footer_top">

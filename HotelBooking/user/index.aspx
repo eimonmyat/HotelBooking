@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GeneralMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="HotelBooking.index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="UserMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="HotelBooking.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<!-- about_area_start -->
+    <!-- about_area_start -->
     <div class="about_area">
         <div class="container">
             <div class="row">
@@ -22,10 +22,10 @@
                 <div class="col-xl-7 col-lg-7">
                     <div class="about_thumb d-flex">
                         <div class="img_1">
-                            <img src="img/about/about_1.png" alt="">
+                            <img src="../img/about/about_1.png" alt="">
                         </div>
                         <div class="img_2">
-                            <img src="img/about/about_2.png" alt="">
+                            <img src="../img/about/about_2.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
     <!-- about_area_end -->
 
     <!-- offers_area_start -->
-    <div class="offers_area">
+    <%--<div class="offers_area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
     <!-- offers_area_end -->
 
     <!-- video_area_start -->
@@ -116,10 +116,10 @@
                 <div class="col-xl-7 col-lg-7">
                     <div class="about_thumb2 d-flex">
                         <div class="img_1">
-                            <img src="img/about/1.png" alt="">
+                            <img src="../img/about/1.png" alt="">
                         </div>
                         <div class="img_2">
-                            <img src="img/about/2.png" alt="">
+                            <img src="../img/about/2.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
         <div class="rooms_here">
             <div class="single_rooms">
                 <div class="room_thumb">
-                    <img src="img/rooms/1.png" alt="">
+                    <img src="../img/rooms/1.png" alt="">
                     <div class="room_heading d-flex justify-content-between align-items-center">
                         <div class="room_heading_inner">
                             <span>From $250/night</span>
@@ -168,7 +168,7 @@
             </div>
             <div class="single_rooms">
                 <div class="room_thumb">
-                    <img src="img/rooms/2.png" alt="">
+                    <img src="../img/rooms/2.png" alt="">
                     <div class="room_heading d-flex justify-content-between align-items-center">
                         <div class="room_heading_inner">
                             <span>From $250/night</span>
@@ -180,7 +180,7 @@
             </div>
             <div class="single_rooms">
                 <div class="room_thumb">
-                    <img src="img/rooms/3.png" alt="">
+                    <img src="../img/rooms/3.png" alt="">
                     <div class="room_heading d-flex justify-content-between align-items-center">
                         <div class="room_heading_inner">
                             <span>From $250/night</span>
@@ -192,7 +192,7 @@
             </div>
             <div class="single_rooms">
                 <div class="room_thumb">
-                    <img src="img/rooms/4.png" alt="">
+                    <img src="../img/rooms/4.png" alt="">
                     <div class="room_heading d-flex justify-content-between align-items-center">
                         <div class="room_heading_inner">
                             <span>From $250/night</span>
@@ -234,7 +234,7 @@
     <!-- instragram_area_start -->
     <div class="instragram_area">
         <div class="single_instagram">
-            <img src="img/instragram/1.png" alt="">
+            <img src="../img/instragram/1.png" alt="">
             <div class="ovrelay">
                 <a href="#">
                     <i class="fa fa-instagram"></i>
@@ -242,7 +242,7 @@
             </div>
         </div>
         <div class="single_instagram">
-            <img src="img/instragram/2.png" alt="">
+            <img src="../img/instragram/2.png" alt="">
             <div class="ovrelay">
                 <a href="#">
                     <i class="fa fa-instagram"></i>
@@ -250,7 +250,7 @@
             </div>
         </div>
         <div class="single_instagram">
-            <img src="img/instragram/3.png" alt="">
+            <img src="../img/instragram/3.png" alt="">
             <div class="ovrelay">
                 <a href="#">
                     <i class="fa fa-instagram"></i>
@@ -258,7 +258,7 @@
             </div>
         </div>
         <div class="single_instagram">
-            <img src="img/instragram/4.png" alt="">
+            <img src="../img/instragram/4.png" alt="">
             <div class="ovrelay">
                 <a href="#">
                     <i class="fa fa-instagram"></i>
@@ -266,7 +266,7 @@
             </div>
         </div>
         <div class="single_instagram">
-            <img src="img/instragram/5.png" alt="">
+            <img src="../img/instragram/5.png" alt="">
             <div class="ovrelay">
                 <a href="#">
                     <i class="fa fa-instagram"></i>

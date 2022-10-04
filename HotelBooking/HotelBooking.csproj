@@ -68,11 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\admin.aspx" />
+    <Content Include="admin\AdminLogIn.aspx" />
     <Content Include="admin\BookingList.aspx" />
     <Content Include="admin\Check.aspx" />
     <Content Include="admin\Room.aspx" />
     <Content Include="admin\roomType.aspx" />
     <Content Include="img\calendar.png" />
+    <Content Include="img\shad.ico" />
+    <Content Include="index2.aspx" />
+    <Content Include="user\AvailableRoom.aspx" />
     <Content Include="user\Booking.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -205,7 +209,7 @@
     <Content Include="img\rooms\3.png" />
     <Content Include="img\rooms\4.png" />
     <Content Include="img\video\video.png" />
-    <Content Include="index.aspx" />
+    <Content Include="user\index.aspx" />
     <Content Include="js\ajax-form.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\contact.js" />
@@ -231,9 +235,12 @@
     <Content Include="js\waypoints.min.js" />
     <Content Include="js\wow.min.js" />
     <Content Include="LogIn.aspx" />
+    <Content Include="user\CustomerLogIn.aspx" />
+    <Content Include="user\UserBookingList.aspx" />
     <Content Include="user\Reserve.aspx" />
     <Content Include="user\ReserveList.aspx" />
     <Content Include="user\RoomDetail.aspx" />
+    <Content Include="UserHome.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +257,20 @@
     </Compile>
     <Compile Include="admin\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminLogIn.aspx.cs">
+      <DependentUpon>AdminLogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminLogIn.aspx.designer.cs">
+      <DependentUpon>AdminLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book.Master.cs">
+      <DependentUpon>Book.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book.Master.designer.cs">
+      <DependentUpon>Book.Master</DependentUpon>
     </Compile>
     <Compile Include="admin\BookingList.aspx.cs">
       <DependentUpon>BookingList.aspx</DependentUpon>
@@ -279,10 +300,24 @@
     <Compile Include="admin\roomType.aspx.designer.cs">
       <DependentUpon>roomType.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MainDataset.Designer.cs">
+    <Compile Include="index2.aspx.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index2.aspx.designer.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainDataset1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="user\AvailableRoom.aspx.cs">
+      <DependentUpon>AvailableRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\AvailableRoom.aspx.designer.cs">
+      <DependentUpon>AvailableRoom.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Booking.aspx.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
@@ -298,11 +333,11 @@
     <Compile Include="GeneralMaster.Master.designer.cs">
       <DependentUpon>GeneralMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
+    <Compile Include="user\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="user\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="LogIn.aspx.cs">
@@ -313,12 +348,26 @@
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserMaster.Master.cs">
+    <Compile Include="user\UserMaster.Master.cs">
       <DependentUpon>UserMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserMaster.Master.designer.cs">
+    <Compile Include="user\UserMaster.Master.designer.cs">
       <DependentUpon>UserMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="user\CustomerLogIn.aspx.cs">
+      <DependentUpon>CustomerLogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\CustomerLogIn.aspx.designer.cs">
+      <DependentUpon>CustomerLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\UserBookingList.aspx.cs">
+      <DependentUpon>UserBookingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\UserBookingList.aspx.designer.cs">
+      <DependentUpon>UserBookingList.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Reserve.aspx.cs">
       <DependentUpon>Reserve.aspx</DependentUpon>
@@ -340,6 +389,13 @@
     </Compile>
     <Compile Include="user\RoomDetail.aspx.designer.cs">
       <DependentUpon>RoomDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -377,10 +433,11 @@
     <Content Include="fonts\themify.ttf" />
     <Content Include="fonts\themify.woff" />
     <Content Include="AdminMaster.Master" />
+    <Content Include="Book.Master" />
     <None Include="MainDataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MainDataset.Designer.cs</LastGenOutput>
+      <LastGenOutput>MainDataset1.Designer.cs</LastGenOutput>
     </None>
     <Content Include="MainDataset.xss">
       <DependentUpon>MainDataset.xsd</DependentUpon>
@@ -405,7 +462,7 @@
     <Content Include="scss\_slick-nav.scss" />
     <Content Include="scss\_slider.scss" />
     <Content Include="scss\_varriable.scss" />
-    <Content Include="UserMaster.Master" />
+    <Content Include="user\UserMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

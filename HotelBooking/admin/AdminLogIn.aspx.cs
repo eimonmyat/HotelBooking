@@ -6,10 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-namespace HotelBooking
+namespace HotelBooking.admin
 {
-    public partial class LogIn : System.Web.UI.Page
+    public partial class AdminLogIn : System.Web.UI.Page
     {
+
         MainDatasetTableAdapters.AdminTableAdapter AdminTbl = new MainDatasetTableAdapters.AdminTableAdapter();
         DataTable Dt = new DataTable();
         DataTable DtDisplay = new DataTable();
@@ -17,10 +18,10 @@ namespace HotelBooking
         {
 
         }
-        //protected void lbtnLogIn_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("LogIn.aspx");
-        //}
+        protected void lbtnLogIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("admin/AdminLogIn.aspx");
+        }
         protected void btnLogIn_Click(object sender, EventArgs e)
         {
             if (txtAdminName.Text.Trim() == string.Empty)

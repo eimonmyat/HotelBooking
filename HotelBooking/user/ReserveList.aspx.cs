@@ -69,7 +69,8 @@ namespace HotelBooking.user
         }
         protected void btnContinue_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Booking.aspx");
+
+            Response.Redirect("AvailableRoom.aspx");
         }
         protected void btnCheckOut_Click(object sender, EventArgs e)
         {
@@ -102,15 +103,15 @@ namespace HotelBooking.user
 
             if (Dt1.Rows.Count != 0)
             {
-                //if (Session["LogInCustomer"] == null)
-                //{
-                //    Session["URL"] = "CheckOut.aspx";
-                //    Response.Redirect("CustomerLogin.aspx");
-                //}
-                //else
-                //{
+                if (Session["LogInCustomer"] == null)
+                {
+                    Session["URL"] = "Reserve.aspx";
+                    Response.Redirect("CustomerLogin.aspx");
+                }
+                else
+                {
                     Response.Redirect("Reserve.aspx");
-                //}
+                }
             }
             else
             {

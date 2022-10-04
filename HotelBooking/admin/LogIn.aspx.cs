@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+using System.Data; 
 
-namespace HotelBooking
+namespace HotelBooking.admin
 {
     public partial class LogIn : System.Web.UI.Page
     {
@@ -17,10 +17,10 @@ namespace HotelBooking
         {
 
         }
-        //protected void lbtnLogIn_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("LogIn.aspx");
-        //}
+        protected void lbtnLogIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("admin/LogIn.aspx");
+        }
         protected void btnLogIn_Click(object sender, EventArgs e)
         {
             if (txtAdminName.Text.Trim() == string.Empty)
@@ -39,7 +39,7 @@ namespace HotelBooking
                 if (Dt.Rows.Count > 0)
                 {
                     Session["LogInAdmin"] = Dt.Rows[0][1];
-                    Response.Redirect("admin/admin.aspx");
+                    Response.Redirect("admin/Admin.aspx");
 
                 }
                 else

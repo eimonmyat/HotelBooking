@@ -4,17 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
 namespace HotelBooking
 {
-    public partial class GeneralMaster : System.Web.UI.MasterPage
+    public partial class index2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }

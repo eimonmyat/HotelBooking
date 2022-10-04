@@ -49,12 +49,12 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">home</a></li>
-                                        <li><a href="rooms.html">rooms</a></li>
+                                        <%--<li><a class="active" href="index.html">home</a></li>
+                                        <li><a href="user/Booking.aspx">rooms</a></li>
                                         <li><a href="about.html">About</a></li>
-
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="LogIn.html">Log In</a></li>
+                                         <li><a href="contact.aspx">Contact</a></li>--%>
+                                        <li><a href="../LogIn.aspx">Admin Log In</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -87,10 +87,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="book_btn d-none d-lg-block">
-                                    
-                                    <a href="Booking.aspx">Book A Room</a>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-12">
@@ -103,59 +100,11 @@
     </header>
     <!-- header-end -->
 
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text text-center">
-                                <h3>Montana Resort</h3>
-                                <p>Unlock to enjoy the view of Martine</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text text-center">
-                                <h3>Life is Beautiful</h3>
-                                <p>Unlock to enjoy the view of Martine</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text text-center">
-                                <h3>Montana Resort</h3>
-                                <p>Unlock to enjoy the view of Martine</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text text-center">
-                                <h3>Life is Beautiful</h3>
-                                <p>Unlock to enjoy the view of Martine</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg_1">
+        <h3>Laxaries Rooms</h3>
     </div>
+    <!-- bradcam_area_end -->
     <form id="form1" runat="server">
         <!-- form itself end-->
         

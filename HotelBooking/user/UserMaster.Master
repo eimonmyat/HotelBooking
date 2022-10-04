@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="HotelBooking.AdminMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="HotelBooking.UserMaster" %>
 
 <!DOCTYPE html>
 
@@ -15,17 +15,17 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/gijgo.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -41,13 +41,20 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a  class="active" href="admin.aspx">admin</a></li>
-                                        <li><a href="roomType.aspx">room type</a></li>
-                                        <li><a href="Room.aspx">room</a></li>
-                                        <li><a href="BookingList.aspx">booking list</a></li>
-                                        <li><a href="Check.aspx">Check</a></li>
-                                        <li><a href="../LogIn.aspx">Log Out</a></li>
-                                            
+                                        <li><a class="active" href="index.aspx">home</a></li>
+                                        <li><a href="CustomerLogIn.aspx">Log In</a></li>
+                                        <li><a href="Booking.aspx">rooms</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                         <li><a href="contact.aspx">Contact</a></li>
+                                        <li><a href="UserBookingList.aspx">
+                                             <asp:Image ID="imgMessage" runat="server" Visible="False" ImageUrl="~/img/shad.ico" Height="13" />
+                                            Booking List</a></li>
+                                        <%--<li><a href="index.html">home</a></li>--%>
+                                        <%--<li><a class="active" href="rooms.html">rooms</a></li>--%>
+                                        <%--<li><a href="about.html">About</a></li>--%>
+                                        
+                                        <%--<li><a href="contact.html">
+                                            <asp:ImageButton ID="btnMessage" runat="server" Height="13px" ImageUrl="~/img/shad.ico" Visible="False" />log out</a></li>--%>
                                     </ul>
                                 </nav>
                             </div>
@@ -80,7 +87,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                                
+                                <div class="book_btn d-none d-lg-block">
+                                    
+                                    <a href="user/Booking.aspx">Book Now</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12">
@@ -93,20 +103,71 @@
     </header>
     <!-- header-end -->
 
-    <!-- bradcam_area_start -->
-    <div class="bradcam_area breadcam_bg_1">
-        <h3>Laxaries Rooms</h3>
+     <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Montana Resort</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Life is Beautiful</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Montana Resort</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Life is Beautiful</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- bradcam_area_end -->
+    
     <form id="form1" runat="server">
+
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <!-- footer -->
+    
     </form>
-     <!-- footer -->
     <footer class="footer" >
-        <%--<div class="footer_top">
+        <div class="footer_top">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-md-6 col-lg-3">
@@ -155,7 +216,7 @@
                     </div>
                 </div>
             </div>
-        </div>--%>
+        </div>
         <div class="copy-right_text">
             <div class="container">
                 <div class="footer_border"></div>
@@ -192,40 +253,39 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div>
         </div>
     </footer>
-
-    <!-- form itself end-->
     
-<!-- form itself end -->
+
+    
 
 
     <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/gijgo.min.js"></script>
+    <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/isotope.pkgd.min.js"></script>
+    <script src="../js/ajax-form.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/scrollIt.js"></script>
+    <script src="../js/jquery.scrollUp.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/nice-select.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/gijgo.min.js"></script>
 
     <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/jquery.form.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/mail-script.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',

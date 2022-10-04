@@ -26,10 +26,14 @@ namespace HotelBooking
             {
                 Calendar1.Visible=false;
                 Calendar2.Visible = false;
+                //Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(today), Convert.ToDateTime(today));
+                //setRoomList();
+                txtStartDate.Text = today;
+                txtEndDate.Text = today;
             }
             
-                Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(today), Convert.ToDateTime(today));
-                setRoomList();
+            
+                
             
             
             //MultiView1.ActiveViewIndex = 0;
@@ -53,86 +57,71 @@ namespace HotelBooking
             //Label3.Text = Session["StartDate"].ToString();
             //Label4.Text = Session["EndDate"].ToString();
             //Label5.Text = Session["StartDate"].ToString();
-            Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
 
-            setRoomList();
+            //Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
+            //setRoomList();
+
+            Session["StartDate"] = txtStartDate.Text;
+            Session["EndDate"] = txtEndDate.Text;
+            Response.Redirect("AvailableRoom.aspx");
 
         }
-        protected void setRoomList()
-        {
-            DtDisplay.Columns.Clear();
-            DtDisplay.Rows.Clear();
-            DtDisplay.Columns.Add("No");//1
-            DtDisplay.Columns.Add("RoomID");//8
-            DtDisplay.Columns.Add("RoomNumber");
-            DtDisplay.Columns.Add("RoomTypeID");
-            DtDisplay.Columns.Add("RoomTypeName");//Dell i5
-            DtDisplay.Columns.Add("Price");//laptop
-            DtDisplay.Columns.Add("Capacity");
-            DtDisplay.Columns.Add("Description");
-            DtDisplay.Columns.Add("RoomImage");
+        //protected void setRoomList()
+        //{
+        //    DtDisplay.Columns.Clear();
+        //    DtDisplay.Rows.Clear();
+        //    DtDisplay.Columns.Add("No");//1
+        //    DtDisplay.Columns.Add("RoomID");//8
+        //    DtDisplay.Columns.Add("RoomNumber");
+        //    DtDisplay.Columns.Add("RoomTypeID");
+        //    DtDisplay.Columns.Add("RoomTypeName");//Dell i5
+        //    DtDisplay.Columns.Add("Price");//laptop
+        //    DtDisplay.Columns.Add("Capacity");
+        //    DtDisplay.Columns.Add("Description");
+        //    DtDisplay.Columns.Add("RoomImage");
 
-            int count = Dt1.Rows.Count;
-            if (count > 0)
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    //    int RoomID = Convert.ToInt32(Dt1.Rows[i][1].ToString());
+        //    int count = Dt1.Rows.Count;
+        //    if (count > 0)
+        //    {
+        //        for (int i = 0; i < count; i++)
+        //        {
+                    
+        //            Dr = DtDisplay.NewRow();
+        //            Dr[0] = Dt1.Rows[i][0];//0+1=1
+        //            Dr[1] = Dt1.Rows[i][1];//proid=8
+        //            Dr[2] = Dt1.Rows[i][2];//MSI
+        //            Dr[3] = Dt1.Rows[i][3];//1
+        //            Dr[4] = Dt1.Rows[i][4];
+        //            Dr[5] = Dt1.Rows[i][5];
+        //            Dr[6] = Dt1.Rows[i][6];
+        //            Dr[7] = Dt1.Rows[i][7];
+        //            Dr[8] = Dt1.Rows[i][8];
 
-                    //    Dt2 = RoomTbl.Room_Select_By_RoomID((RoomID));
-                    //for (int j = 0; j < Dt2.Rows.Count; j++)
-                    //{
-                    Dr = DtDisplay.NewRow();
-                    Dr[0] = Dt1.Rows[i][0];//0+1=1
-                    Dr[1] = Dt1.Rows[i][1];//proid=8
-                    Dr[2] = Dt1.Rows[i][2];//MSI
-                    Dr[3] = Dt1.Rows[i][3];//1
-                    Dr[4] = Dt1.Rows[i][4];
-                    Dr[5] = Dt1.Rows[i][5];
-                    Dr[6] = Dt1.Rows[i][6];
-                    Dr[7] = Dt1.Rows[i][7];
-                    Dr[8] = Dt1.Rows[i][8];
-
-                    DtDisplay.Rows.Add(Dr);
+        //            DtDisplay.Rows.Add(Dr);
                     
 
 
-                }
-            }
-            else
-            {
-                lblMsg.Text = "No Room for this date!Please select again.";
-                //Dt2 = RoomTbl.GetData();
-                //for (int i = 0; i < Dt2.Rows.Count; i++)
-                //{
-                //    Dr = DtDisplay.NewRow();
-                //Dr[0] = Dt2.Rows[i][0];//0+1=1
-                //Dr[1] = Dt2.Rows[i][1];//proid=8
-                //Dr[2] = Dt2.Rows[i][2];//MSI
-                //Dr[3] = Dt2.Rows[i][3];//1
-                //Dr[4] = Dt2.Rows[i][4];
-                //Dr[5] = Dt2.Rows[i][5];
-                //Dr[6] = Dt2.Rows[i][6];
-                //Dr[7] = Dt2.Rows[i][7];
-                //Dr[8] = Dt2.Rows[i][8];
+        //        }
+        //    }
+        //    else
+        //    {
+        //        lblMsg.Text = "No Room for this date!Please select again.";
+                
 
-                //DtDisplay.Rows.Add(Dr);
-                //}
-
-            }
+        //    }
 
             
-            RoomNumberList.DataSource = DtDisplay;
-            RoomNumberList.DataBind();
-        }
-        protected void RoomNumberList_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        //    RoomNumberList.DataSource = DtDisplay;
+        //    RoomNumberList.DataBind();
+        //}
+        //protected void RoomNumberList_SelectedIndexChanged(object sender, EventArgs e)
+        //{
 
-            Session["RoomID"] = RoomNumberList.SelectedValue.ToString();
-            ////Label5.Text = RoomNumberList.SelectedValue.ToString();
-            Response.Redirect("RoomDetail.aspx");
-            //MultiView1.ActiveViewIndex = 1;
-        }
+        //    Session["RoomID"] = RoomNumberList.SelectedValue.ToString();
+            
+        //    Response.Redirect("RoomDetail.aspx");
+            
+        //}
 
         
 
@@ -153,7 +142,7 @@ namespace HotelBooking
         {
             txtStartDate.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
             Calendar1.Visible = false;
-            Session["StartDate"] = txtStartDate.Text;
+            //Session["StartDate"] = txtStartDate.Text;
         }
 
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
@@ -182,7 +171,7 @@ namespace HotelBooking
         {
             txtEndDate.Text = Calendar2.SelectedDate.ToString("yyyy-MM-dd");
             Calendar2.Visible = false;
-            Session["EndDate"] = txtEndDate.Text;
+            //Session["EndDate"] = txtEndDate.Text;
         }
 
         protected void Calendar2_DayRender(object sender, DayRenderEventArgs e)
