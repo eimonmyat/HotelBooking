@@ -78,7 +78,7 @@ namespace HotelBooking.admin
                     Dt = Admin_Booking.GetData();
                 //No,Bookingid,Bookingdate,cutid,custname,shippingadd,total,deliverstatus,notistatus
                 else
-                    Dt = Admin_Booking.Admin_Booking_Select_By_BookingDate(Convert.ToDateTime(txtBookingDate.Text));
+                    Dt = Admin_Booking.Admin_Booking_Select_By_BookingDate(Convert.ToDateTime(txtBookingDate.Text.ToString()));
 
                 DisplayAdminBooking();
             }
@@ -86,41 +86,65 @@ namespace HotelBooking.admin
 
         protected void btnPrint_Click(object sender, EventArgs e)
         {
+
             if (ddlSearchType.SelectedIndex == 0)
             {
-                if (txtBookingDate.Text.Trim().ToString() == string.Empty)
-                    Dt = Admin_BookingReport.GetData();
+                if (txtBookingDate.Text.ToString() == string.Empty)
+                {
+                    Session["View"] = "";
+                    Session["Data"] = txtBookingDate.Text;
+                    //Response.Redirect("BookingListReport.aspx");
+                }
+                else
+                {
+                    Session["View"] = "0";
+                    Session["Data"] = txtBookingDate.Text;
+                    //Response.Redirect("BookingListReport.aspx");
+                }
             }
             else
             {
-                if (txtSearchData.Text.Trim().ToString() == string.Empty)
-                    Dt = Admin_BookingReport.GetData();
+                if (txtSearchData.Text.ToString() == string.Empty)
+                {
+                    Session["View"] = "";
+                    Session["Data"] = txtSearchData.Text;
+                    //Response.Redirect("BookingListReport.aspx");
+                }
             }
+
             if (ddlSearchType.SelectedIndex == 0)
             {
-                Dt = Admin_BookingReport.Admin_Booking_Report_Select_By_BookingDate(Convert.ToDateTime(txtBookingDate.Text));
+                if (txtBookingDate.Text.ToString() != string.Empty)
+                {
+                    Session["View"] = "0";
+                    Session["Data"] = txtBookingDate.Text;
+                    //Response.Redirect("BookingListReport.aspx");
+                }
 
             }
             else if (ddlSearchType.SelectedIndex == 1)
             {
-                Dt = Admin_BookingReport.Admin_Booking_Report_Select_By_CustomerName(txtSearchData.Text);
+                Session["View"] = "1";
+                Session["Data"] = txtSearchData.Text;
+
+                //Response.Redirect("BookingListReport.aspx");
             }
             else if (ddlSearchType.SelectedIndex == 2)
             {
-                Dt = Admin_BookingReport.Admin_Booking_Report_Select_By_Email(txtSearchData.Text);
+                Session["View"] = "2";
+                Session["Data"] = txtSearchData.Text;
+
+                //Response.Redirect("BookingListReport.aspx");
             }
             else if (ddlSearchType.SelectedIndex == 3)
             {
-                Dt = Admin_BookingReport.Admin_Booking_Report_Select_By_Total(Convert.ToInt32(txtSearchData.Text));
-            }
-            else if (ddlSearchType.SelectedIndex == 4)
-            {
-                Dt = Admin_BookingReport.Admin_Booking_Report_Select_By_CheckStatus(txtSearchData.Text);
-            }
+                Session["View"] = "3";
+                Session["Data"] = txtSearchData.Text;
 
-            Session["ReportDt"] = Dt;
-            Session["ReportName"] = "crptBooking.rpt";
-            Response.Redirect("Report.aspx");
+                //Response.Redirect("BookingListReport.aspx");
+            }
+            Response.Redirect("BookingListReport.aspx");
+            Label1.Text = Session["Data"].ToString();
         }
 
         protected void txtSearchData_TextChanged(object sender, EventArgs e)

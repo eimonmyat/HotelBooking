@@ -22,6 +22,11 @@ namespace HotelBooking.user
         {
             Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
             setRoomList();
+            ddlRoomType.DataTextField = "RoomTypeName";
+            ddlRoomType.DataValueField = "RoomTypeID";
+            ddlRoomType.DataSource = RoomTypeTbl.GetData();
+            ddlRoomType.DataBind();
+                
         }
 
         protected void RoomNumberList_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,6 +82,28 @@ namespace HotelBooking.user
 
             RoomNumberList.DataSource = DtDisplay;
             RoomNumberList.DataBind();
+        }
+
+        protected void ddlRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSearch.Enabled = false;
+            Dt1 = RoomTbl.GetDataBy4(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()), ddlRoomType.SelectedItem.ToString());
+            setRoomList();
+            ddlRoomType.DataTextField = "RoomTypeName";
+            ddlRoomType.DataValueField = "RoomTypeID";
+            ddlRoomType.DataSource = RoomTypeTbl.GetData();
+            ddlRoomType.DataBind();
+        }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            ddlRoomType.Enabled = false;
+            Dt1 = RoomTbl.GetDataBy5(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()), Convert.ToInt32(txtSearch.Text.ToString()));
+            setRoomList();
+            ddlRoomType.DataTextField = "RoomTypeName";
+            ddlRoomType.DataValueField = "RoomTypeID";
+            ddlRoomType.DataSource = RoomTypeTbl.GetData();
+            ddlRoomType.DataBind();
         }
     }
 }

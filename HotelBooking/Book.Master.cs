@@ -12,6 +12,11 @@ namespace HotelBooking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //String activePage = Request.RawUrl;
+            //if (activePage.Contains("CustomerLogIn.aspx"))
+            //{
+            //    page1.Attributes("class") = "active";
+            //}
             MainDatasetTableAdapters.BookingTableAdapter BookingTbl = new MainDatasetTableAdapters.BookingTableAdapter();
             DataTable Dt = new DataTable();
             if (Session["LogInCustomer"] != null)

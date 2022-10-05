@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Montana</title>
+    <title>Mon</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,8 +44,8 @@
                                         <li><a class="active" href="index.aspx">home</a></li>
                                         <li><a href="CustomerLogIn.aspx">Log In</a></li>
                                         <li><a href="Booking.aspx">rooms</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                         <li><a href="contact.aspx">Contact</a></li>
+                                        <%--<li><a href="about.html">About</a></li>
+                                         <li><a href="contact.aspx">Contact</a></li>--%>
                                         <li><a href="UserBookingList.aspx">
                                              <asp:Image ID="imgMessage" runat="server" Visible="False" ImageUrl="~/img/shad.ico" Height="13" />
                                             Booking List</a></li>
@@ -111,7 +111,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="slider_text text-center">
-                                <h3>Montana Resort</h3>
+                                <h3>Mon Resort</h3>
                                 <p>Unlock to enjoy the view of Martine</p>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="slider_text text-center">
-                                <h3>Montana Resort</h3>
+                                <h3>Mon Resort</h3>
                                 <p>Unlock to enjoy the view of Martine</p>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                     <div class="col-xl-8 col-md-7 col-lg-9">
                         <p class="copy_right">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <%--| This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>--%>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>

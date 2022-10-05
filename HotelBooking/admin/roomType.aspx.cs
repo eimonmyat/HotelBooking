@@ -149,20 +149,9 @@ namespace HotelBooking.admin
 
         protected void btnPrint_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text.Trim().ToString() == String.Empty)
-            {
-                Dt = RoomTypeTbl.GetData();
+            Session["Data"] = txtSearch.Text;
 
-            }
-            else
-            {
-                Dt = RoomTypeTbl.RoomType_Select_By_Search_RoomTypeName(txtSearch.Text);
-
-            }
-
-            Session["ReportDt"] = Dt;
-            Session["ReportName"] = "crptCategory.rpt";
-            Response.Redirect("Report.aspx");
+            Response.Redirect("RoomTypeReport.aspx");
         }
 
         protected void txtSearch_TextChanged(object sender, EventArgs e)

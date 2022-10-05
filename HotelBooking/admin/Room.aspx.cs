@@ -299,24 +299,9 @@ namespace HotelBooking.admin
         }
         protected void btnPrint_Click(object sender, EventArgs e)
         {
-            //if (txtSearch.Text.Trim().ToString() != string.Empty)
-            //{
-            //    if (ddlSearchType.SelectedIndex == 0)
-            //        Dt = ProductTbl.Product_Select_By_SearchProName(txtSearch.Text);
-            //    else if (ddlSearchType.SelectedIndex == 1)
-            //        Dt = ProductTbl.Product_Select_By_SearchCatName(txtSearch.Text);
-            //    else if (ddlSearchType.SelectedIndex == 2)
-            //        Dt = ProductTbl.Product_Select_By_SearchPrice(txtSearch.Text);
-            //    else if (ddlSearchType.SelectedIndex == 3)
-            //        Dt = ProductTbl.Product_Select_By_SearchQuantity(txtSearch.Text);
-            //}
-            //else
-            //{
-            //    Dt = ProductTbl.GetData();
-            //}
-            //Session["ReportDt"] = Dt;
-            //Session["ReportName"] = "crptProduct.rpt";
-            //Response.Redirect("Report.aspx");
+            Session["Data"] = txtSearch.Text;
+
+            Response.Redirect("RoomReport.aspx");
         }
     }
 }

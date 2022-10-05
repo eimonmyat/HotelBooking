@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="UserMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="HotelBooking.index" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,12 +11,15 @@
                     <div class="about_info">
                         <div class="section_title mb-20px">
                             <span>About Us</span>
-                            <h3>A Luxuries Hotel <br>
+                            <h3>A Luxuries Hotel
+                                <br>
                                 with Nature</h3>
                         </div>
-                        <p>Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
+                        <p>
+                            Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
                             dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.</p>
+                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.
+                        </p>
                         <a href="#" class="line-button">Learn More</a>
                     </div>
                 </div>
@@ -100,7 +104,8 @@
     <div class="video_area video_bg overlay">
         <div class="video_area_inner text-center">
             <span>Montana Sea View</span>
-            <h3>Relax and Enjoy your <br>
+            <h3>Relax and Enjoy your
+                <br>
                 Vacation </h3>
             <a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" class="video_btn popup-video">
                 <i class="fa fa-play"></i>
@@ -127,12 +132,15 @@
                     <div class="about_info">
                         <div class="section_title mb-20px">
                             <span>Delicious Food</span>
-                            <h3>We Serve Fresh and <br>
+                            <h3>We Serve Fresh and
+                                <br>
                                 Delicious Food</h3>
                         </div>
-                        <p>Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
+                        <p>
+                            Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
                             dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.</p>
+                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.
+                        </p>
                         <a href="#" class="line-button">Learn More</a>
                     </div>
                 </div>
@@ -142,19 +150,8 @@
     <!-- about_area_end -->
 
     <!-- features_room_startt -->
-    <div class="features_room">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <span>Featured Rooms</span>
-                        <h3>Choose a Better Room</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="rooms_here">
-            <div class="single_rooms">
+    
+           <%-- <div class="single_rooms">
                 <div class="room_thumb">
                     <img src="../img/rooms/1.png" alt="">
                     <div class="room_heading d-flex justify-content-between align-items-center">
@@ -162,7 +159,7 @@
                             <span>From $250/night</span>
                             <h3>Superior Room</h3>
                         </div>
-                        <a href="#" class="line-button">book now</a>
+                        <a href="Booking.aspx" class="line-button">book now</a>
                     </div>
                 </div>
             </div>
@@ -201,9 +198,9 @@
                         <a href="#" class="line-button">book now</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div>--%>
+        
+  
     <!-- features_room_end -->
 
     <!-- forQuery_start -->
@@ -276,6 +273,6 @@
     </div>
     <!-- instragram_area_end -->
 
-    
+
 
 </asp:Content>

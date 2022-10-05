@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="section-top-border">
         <div class="text-center">
-            <h3>Customer LogIn</h3>
+            <h3>Booking List</h3>
             <asp:Label ID="lblError2" runat="server" Text=""></asp:Label>
         </div>
         <div class="row justify-content-center">
@@ -13,8 +13,11 @@
                 <table class="table">
                     <tr>
                         <td>
-                            <asp:Button ID="btnAll" runat="server" Text="Button" OnClick="btnAll_Click" />
+                            <asp:Button ID="btnAll" runat="server" Text="<<All" OnClick="btnAll_Click" CssClass="genric-btn info radius"/>
                         </td>
+                        <%--<td style="text-align:right">
+                            <asp:Button ID="Button1" runat="server" Text="Print" CssClass="genric-btn info radius"/>
+                        </td>--%>
                     </tr>
                     <tr>
                         <td>

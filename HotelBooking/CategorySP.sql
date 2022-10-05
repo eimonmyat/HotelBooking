@@ -53,7 +53,13 @@ end
 go
 
 
+create procedure sp_roomType_Select_By_Room
 
+as 
+begin
+select Row_Number()Over(Order By RoomTypeName) As No, * from vi_RoomType Order By RoomTypeName
+end
+go
 
 
 

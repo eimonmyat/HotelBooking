@@ -103,6 +103,7 @@ namespace HotelBooking.user
             Session["NotiStatus"] = "-";
             Booking.Booking_Cust_NotiStatus_Update(Convert.ToInt32(Session["LogInCustomer"]));
             Response.Redirect(("UserBookingList.aspx"));
+            
         }
     }
 }
