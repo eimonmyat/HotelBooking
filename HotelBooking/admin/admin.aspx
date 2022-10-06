@@ -13,14 +13,14 @@
         </div>
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <table class="table">
-                        <tr>
-                            <td>
+                    
+                        <%--<tr>
+                            <td>--%>
                                 <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
-                            </td>
+                            <%--</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td>--%>
                                 <asp:Button ID="btnNew" runat="server" Text="New" OnClick="btnNew_Click" Width="100px" CssClass="genric-btn info radius" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" Width="100px" CssClass="genric-btn info radius"/>&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" Width="100px" CssClass="genric-btn info radius"/>&nbsp;&nbsp;&nbsp;
@@ -30,19 +30,22 @@
                                 Admin :&nbsp;&nbsp;&nbsp;
                                 <asp:TextBox ID="txtSearch" runat="server" AutoPostBack="True" OnTextChanged="txtSearch_TextChanged" Width="184px"></asp:TextBox>
 
-                            </td>
-                        </tr>
-                        <tr class="table">
-                            <td>
-                                <br />
+                            <%--</td>
+                        </tr>--%>
+                    <br />
+                    <br />
+                    <%--<table class="table-bordered">
+                        <tr>
+                            <td>--%>
+                                
                                 
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="AdminID" Width="900px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" CssClass="table">
                                     <columns>
-                                        <asp:BoundField DataField="No" HeaderText="No" />
-                                        <asp:BoundField DataField="AdminID" HeaderText="AdminID" Visible="False" />
-                                        <asp:BoundField DataField="AdminName" HeaderText="Admin Name" />
-                                        <asp:BoundField DataField="Password" HeaderText="Password" />
-                                        <asp:TemplateField HeaderText="Select">
+                                        <asp:BoundField DataField="No" HeaderText="No" HeaderStyle-BackColor="#009DFF" />
+                                        <asp:BoundField DataField="AdminID" HeaderText="AdminID" Visible="False" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="AdminName" HeaderText="Admin Name" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="Password" HeaderText="Password" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:TemplateField HeaderText="Select" HeaderStyle-BackColor="#009DFF">
                                             <itemtemplate>
                                                 <asp:LinkButton ID="btnEdit" runat="server" CommandName="Select">
                                                     <asp:CheckBox ID="chkSelect" runat="server" AutoPostBack="False" />
@@ -57,9 +60,9 @@
 
 
 
-                            </td>
+                           <%-- </td>
                         </tr>
-                    </table>
+                    </table>--%>
                 </div>
             </div>
 

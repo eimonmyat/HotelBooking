@@ -10,7 +10,7 @@
 
     <div class="section-top-border">
         <div class="text-center">
-            <asp:Label ID="Label1" runat="server" Text="Room Detail" Font-Bold="True" Font-Size="28px" Font-Underline="True"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Room Details" Font-Bold="True" Font-Size="28px" Font-Underline="True"></asp:Label>
             <%--<h3>Room Detail</h3>--%>
         </div>
         <br />
@@ -28,10 +28,15 @@
                 <div class="col-xl-5 col-lg-5">
                     <div class="text-center">
 
-                        <h3>
-                            <asp:Label ID="lblRoomType" runat="server" Text="Label" Font-Bold="True"></asp:Label></h3>
+                        
                     </div>
                     <table class="table">
+                         <tr>
+                            <td>Room Type:</td>
+                            <td>
+                                <asp:Label ID="lblRoomType" runat="server" Text="Label"></asp:Label>
+                            </td>
+                        </tr>
                         <tr>
                             <td>Room Number:</td>
                             <td>
@@ -61,9 +66,9 @@
                                     <asp:TextBox ID="txtQty" runat="server" TextMode="Number"></asp:TextBox></td>
                             </tr>--%>
                         <tr>
-                            <td></td>
+                            <td align="center"><asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click" CssClass="genric-btn info radius" Width="100px"/></td>
                             <td>
-                                <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click" CssClass="genric-btn info radius" Width="100px"/>
+                                
                                 <asp:Button ID="btnReserve" runat="server" Text="Reserve" OnClick="btnReserve_Click" CssClass="genric-btn info radius" Width="100px"/>
                             </td>
                         </tr>

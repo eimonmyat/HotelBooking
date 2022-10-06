@@ -61,7 +61,7 @@ namespace HotelBooking.user
                 {
                     txtCustName.Text = Dr["CustName"].ToString();
                     txtEmail.Text = Dr["Email"].ToString();
-                    
+                    txtPhone.Text = Dr["Phone"].ToString();
                 }
                 
             }
@@ -113,7 +113,7 @@ namespace HotelBooking.user
                 Total += Convert.ToInt32(Qty * Price);
             }
 
-            lblTotalPrice.Text = Total.ToString();
+            txtTotalPrice.Text = Total.ToString();
 
             //Day = string.Format("{0:D2}", DateTime.Now.Day);
             //Month = string.Format("{0:D2}", DateTime.Now.Month);
@@ -132,7 +132,7 @@ namespace HotelBooking.user
             else
             {
                 //int CustID = Convert.ToInt32(Dt.Rows[0][1].ToString());
-                BookingTbl.Booking_Insert(DateTime.Today, Convert.ToInt32(Session["LogInCustomer"].ToString()), Convert.ToInt32(lblTotalPrice.Text), "Order...");
+                BookingTbl.Booking_Insert(DateTime.Today, Convert.ToInt32(Session["LogInCustomer"].ToString()), Convert.ToInt32(txtTotalPrice.Text), "Order...");
                 int RowIndex = BookingTbl.GetData().Rows.Count;//8
                 int BookingID = Convert.ToInt32(BookingTbl.GetData().Rows[RowIndex - 1][0].ToString());
                 int Index = 0;

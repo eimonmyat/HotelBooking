@@ -10,24 +10,27 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-auto">
-                <table class="table">
+                <%--<table class="table">
                     <tr>
-                        <td>
+                        <td>--%>
                             <asp:Button ID="btnAll" runat="server" Text="<<All" OnClick="btnAll_Click" CssClass="genric-btn info radius"/>
-                        </td>
+                        <br />
+                <br />
+                <%--</td>--%>
                         <%--<td style="text-align:right">
                             <asp:Button ID="Button1" runat="server" Text="Print" CssClass="genric-btn info radius"/>
                         </td>--%>
-                    </tr>
+                    <%--</tr>
                     <tr>
-                        <td>
+                        <td>--%>
                             <asp:DataList ID="DataList1" runat="server" Width="800px" OnPreRender="DataList1_PreRender1">
                                 <ItemTemplate>
                                     <table class="table">
 
                                         <tr>
-                                            <td style="background-color: #3333FF"></td>
+                                            <td style="background-color: #009DFF"></td>
                                         </tr>
+
                                         <tr>
                                             <td>
                                                 <table>
@@ -36,8 +39,8 @@
                                                         <td>
                                                             <asp:Label ID="lblBookingDate" runat="server" Text='<%#Eval("BookingDate") %>'></asp:Label>
                                                         </td>
-                                                        <td></td>
-                                                        <td>Email:</td>
+                                                        <td width="220px"></td>
+                                                        <td >Email:</td>
                                                         <td>
                                                             <asp:Label ID="Label1" runat="server" Text='<%#Eval("Email") %>'></asp:Label>
                                                         </td>
@@ -74,9 +77,9 @@
                                     </table>
                                 </ItemTemplate>
                             </asp:DataList>
-                        </td>
+                       <%-- </td>
                     </tr>
-                </table>
+                </table>--%>
                 </div>
             </div>
         </div>

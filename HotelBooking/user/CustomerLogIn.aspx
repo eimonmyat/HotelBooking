@@ -10,7 +10,7 @@
             <div class="section-top-border">
                 <div class="text-center">
                     <h3>Customer LogIn</h3>
-                    <asp:Label ID="lblError2" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblError2" runat="server" Text="" ForeColor="Red"></asp:Label>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-auto">

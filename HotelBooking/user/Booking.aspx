@@ -12,7 +12,7 @@
                 <div class="progress-table-wrap">
                     <table class="table text-left">
                         <tr>
-                            <td>
+                            <td style="text-align:right">
                                 <asp:Label ID="Label1" runat="server" Text="Start Date:"></asp:Label>
                                 
                             </td>
@@ -22,7 +22,7 @@
                                 <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
 
                             </td>
-                            <td>
+                            <td style="text-align:right">
                                 <asp:Label ID="Label2" runat="server" Text="End Date :"></asp:Label>
                             </td>
                             <td>

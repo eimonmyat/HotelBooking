@@ -13,6 +13,7 @@ namespace HotelBooking.admin
     {
         MainDatasetTableAdapters.Admin_BookingTableAdapter Admin_Booking = new MainDatasetTableAdapters.Admin_BookingTableAdapter();
         MainDatasetTableAdapters.BookingTableAdapter BookingTbl = new MainDatasetTableAdapters.BookingTableAdapter();
+        MainDatasetTableAdapters.RoomTableAdapter RoomTbl = new MainDatasetTableAdapters.RoomTableAdapter();
         DataTable Dt = new DataTable();
         DataTable DtDisplay = new DataTable();
         DataRow Dr;
@@ -54,10 +55,13 @@ namespace HotelBooking.admin
                     Dr[0] = Dt.Rows[i][0];//no=1,2
                     Dr[1] = Dt.Rows[i][1];//orderid=3,5
                     Dr[2] = Dt.Rows[i][2];//orderdate=3.7.2020,5.7.2020
-                    Dr[3] = Dt.Rows[i][3];//custname=PMH,MMK
                     Dr[4] = Dt.Rows[i][5];//shippingadd=mdy,Ygn
                     Dr[5] = Dt.Rows[i][6];//total=700000,800000
-                    Dr[6] = Dt.Rows[i][7];//deliverstatus=order...,order...
+                    Dr[6] = Dt.Rows[i][7];
+                    DataTable roomNo = RoomTbl.Room_Select_By_RoomID(Convert.ToInt32(Dt.Rows[i][3]));
+                    
+                    Dr[3] = roomNo.Rows[0][2];//custname=PMH,MMK
+                    //deliverstatus=order...,order...
                     DtDisplay.Rows.Add(Dr);
                 }
             }

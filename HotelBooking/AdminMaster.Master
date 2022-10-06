@@ -41,7 +41,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a  class="active" href="admin.aspx">admin</a></li>
+                                        <li><a href="admin.aspx">admin</a></li>
                                         <li><a href="roomType.aspx">room type</a></li>
                                         <li><a href="Room.aspx">room</a></li>
                                         <li><a href="BookingList.aspx">booking list</a></li>
@@ -55,7 +55,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="../img/logo.png" alt="">
                                 </a>
                             </div>
                         </div>

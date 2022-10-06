@@ -7,37 +7,38 @@
         <div class="text-center">
             <h3>Room Reserve List</h3>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-auto">
-                <table class="table">
+        <br />
+        <div align="center">
+            <div>
+                <%--<table class="table">
 
                     <tr>
-                        <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RoomID" Width="100%">
+                        <td>--%>
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RoomID" Width="70%" CssClass="table">
                                 <Columns>
-                                    <asp:BoundField DataField="No" HeaderText="No" />
-                                    <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" />
-                                    <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" />
-                                    <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" />
-                                    <asp:BoundField DataField="Price" HeaderText="Price" />
-                                    <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
-                                    <asp:TemplateField HeaderText="Change Quantity" Visible="False">
+                                    <asp:BoundField DataField="No" HeaderText="No" HeaderStyle-BackColor="#009DFF"/>
+                                    <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" HeaderStyle-BackColor="#009DFF"/>
+                                    <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" HeaderStyle-BackColor="#009DFF"/>
+                                    <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" HeaderStyle-BackColor="#009DFF"/>
+                                    <asp:BoundField DataField="Price" HeaderText="Price" HeaderStyle-BackColor="#009DFF"/>
+                                    <asp:BoundField DataField="Quantity" HeaderText="Quantity" HeaderStyle-BackColor="#009DFF"/>
+                                    <asp:TemplateField HeaderText="Change Quantity" Visible="False" HeaderStyle-BackColor="#009DFF">
                                         <ItemTemplate>
                                             <asp:TextBox ID="txtNewQty" Visible="false" runat="server" Text='<%#Bind("Quantity")%>'></asp:TextBox>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
-                        </td>
+                        <%--</td>
 
                     </tr>
                     <tr style="text-align: center">
-                        <td>
+                        <td>--%>
                             <asp:Button ID="btnContinue" runat="server" Text="Continue"  OnClick="btnContinue_Click" CssClass="genric-btn info radius" Width="150px"/>
                             <asp:Button ID="btnCheckOut" runat="server" Text="Check Out"  OnClick="btnCheckOut_Click" CssClass="genric-btn info radius" Width="150px"/>
                             <asp:Button ID="btnCancelBooking" runat="server" Text="Cancel Booking"  OnClick="btnCancelShopping_Click" CssClass="genric-btn info radius" Width="150px"/>
-                        </td>
-                    </tr>
+                        <%--</td>
+                    </tr>--%>
                     <%-- <tr>
             <td>Room Type</td>
             <td>Price</td>
@@ -64,7 +65,7 @@
                 <asp:Button runat="server" Text="Change" ID="btnChange" />
             </td>
         </tr>--%>
-                </table>
+                <%--</table>--%>
             </div>
         </div>
     </div>

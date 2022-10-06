@@ -13,64 +13,38 @@
 
             <div class="row">
                 <div class="col-xl-7 col-lg-7">
-
-                    <div>
-                        <table class="table">
-                            <tr>
-                                <td>
-                                    <asp:Label ID="Label2" runat="server" Text="Customer Name"></asp:Label>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtCustName" runat="server"></asp:TextBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-                <div class="col-xl-5 col-lg-5">
-
-                    <table class="table">
+                    <%--<table class="table">
                         
                         <tr>
-                            <td>
-                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                            <td>--%>
+                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table">
                                     <Columns>
-                                        <asp:BoundField DataField="No" HeaderText="No" />
-                                        <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" />
-                                        <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" />
-                                        <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" />
-                                        <asp:BoundField DataField="Price" HeaderText="Price" />
-                                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                                        <asp:BoundField DataField="No" HeaderText="No" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="Price" HeaderText="Price" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" HeaderStyle-BackColor="#009DFF"/>
                                     </Columns>
 
                                 </asp:GridView>
-                            </td>
+                            <%--</td>
                         </tr>
                         <tr>
-                            <td style="text-align: right">Total Price :
-                                <asp:Label ID="lblTotalPrice" runat="server"></asp:Label>
-                            </td>
+                            <td style="text-align: right">--%>
+                    <div align="right">
+                        Total Price :
+                        <asp:TextBox ID="txtTotalPrice" runat="server" Enabled="False"></asp:TextBox>
+                                <%--<asp:Label ID="lblTotalPrice" runat="server"></asp:Label>--%>
+                    </div>
+                                
+                            <%--</td>
                         </tr>
                         <tr>
                             <td style="text-align: right">
-                                <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" CssClass="genric-btn info radius"/>
+                                
                             </td>
-                        </tr>
+                        </tr>--%>
                         <%--<tr>
                                     <td>Room Type</td>
                                     <td>
@@ -96,7 +70,49 @@
                                     </td>
                                 </tr>--%>
                     </table>
+                   
 
+                </div>
+
+
+
+
+
+
+                <div class="col-xl-5 col-lg-5">
+
+                    
+                     <div>
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label2" runat="server" Text="Customer Name"></asp:Label>
+                                </td>
+                                <td align="right">
+                                    <asp:TextBox ID="txtCustName" runat="server" Width="250px"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
+                                </td>
+                                <td align="right">
+                                    <asp:TextBox ID="txtEmail" runat="server" Width="250px"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="Label1" runat="server" Text="Phone"></asp:Label>
+                                </td>
+                                <td align="right">
+                                    <asp:TextBox ID="txtPhone" runat="server" Width="250px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                         <div align="right">
+                             <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" CssClass="genric-btn info radius"/>
+                         </div>
+                    </div>
 
                 </div>
             </div>

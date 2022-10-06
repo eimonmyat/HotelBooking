@@ -72,10 +72,11 @@
                                 <div style="width: 300px">
                                     <ul>
                                         <li>
-                                            <asp:Label ID="RoomType" runat="server" Text='<%#Eval("RoomTypeName")%>' Font-Size="X-Large" Font-Bold="True"></asp:Label>
+                                            <b>Room Number:</b>
+                                            <asp:Label ID="RoomType" runat="server" Text='<%#Eval("RoomNumber")%>' Font-Size="X-Large" Font-Bold="True"></asp:Label>
                                         </li>
                                         <li>
-                                            <asp:Label ID="Detail" runat="server" Text='<%#Eval("Description")%>'></asp:Label>
+                                            <asp:Label ID="Detail" runat="server" Text='<%#Eval("RoomTypeName")%>'></asp:Label>
 
                                         </li>
 

@@ -15,6 +15,24 @@ namespace HotelBooking.user
     {
 
         /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+
+        /// <summary>
+        /// txtTotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTotalPrice;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -51,22 +69,22 @@ namespace HotelBooking.user
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// GridView1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// lblTotalPrice control.
+        /// txtPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalPrice;
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
         /// btnConfirm control.

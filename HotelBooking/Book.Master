@@ -42,7 +42,7 @@
                                 <nav>
                                     <ul id="navigation">
              
-                                         <li ><a class="active" href="index.aspx">home</a></li>
+                                         <li ><a href="index.aspx">home</a></li>
                                         <li ><a href="CustomerLogIn.aspx">Log In</a></li>
                                         <li><a href="Booking.aspx">rooms</a></li>
                                         <%--<li><a href="about.html">About</a></li>

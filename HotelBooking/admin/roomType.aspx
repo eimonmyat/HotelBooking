@@ -11,18 +11,19 @@
             <div class="text-center">
             <h3>ROOM TYPE LIST</h3>
         </div>
+            <br />
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <table class="table">
+                    <%--<table class="table">
                         
                         
                         <tr>
-                            <td>
+                            <td>--%>
                                 <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
-                            </td>
+                            <%--</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td>--%>
                                 <asp:Button ID="btnNew" runat="server" Text="New" OnClick="btnNew_Click" CssClass="genric-btn info radius"/>
                                 <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" CssClass="genric-btn info radius"/>
                                 <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" CssClass="genric-btn info radius"/>
@@ -30,19 +31,20 @@
                                 &nbsp;&nbsp;&nbsp; RoomType Name :
                                 <asp:TextBox ID="txtSearch" runat="server" AutoPostBack="True" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
 
-                            </td>
+                            <%--</td>
                         </tr>
-                        <tr>
-                            <td>
+                        <tr>--%>
+                           <%-- <td>--%>
+                    <br />
                                 <br />
 
-                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RoomTypeID" Width="900px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RoomTypeID" Width="900px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="table">
                                     <Columns>
-                                        <asp:BoundField DataField="No" HeaderText="No" />
-                                        <asp:BoundField DataField="RoomTypeID" HeaderText="RoomTypeID" Visible="False" />
-                                        <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type Name" />
-                                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
-                                        <asp:TemplateField HeaderText="Select">
+                                        <asp:BoundField DataField="No" HeaderText="No" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="RoomTypeID" HeaderText="RoomTypeID" Visible="False" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type Name" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" HeaderStyle-BackColor="#009DFF"/>
+                                        <asp:TemplateField HeaderText="Select" HeaderStyle-BackColor="#009DFF">
                                             <ItemTemplate>
                                                 <asp:LinkButton ID="btnEdit" runat="server" CommandName="Select">
                                                     <asp:CheckBox ID="chkSelect" runat="server" AutoPostBack="False" />
@@ -52,9 +54,9 @@
                                     </Columns>
 
                                 </asp:GridView>
-                            </td>
+                            <%--</td>
                         </tr>
-                    </table>
+                    </table>--%>
                 </div>
             </div>
         </asp:View>
