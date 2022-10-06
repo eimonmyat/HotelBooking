@@ -16,11 +16,16 @@
                                 with Nature</h3>
                         </div>
                         <p>
-                            Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
-                            dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.
+                            Spend your holiday on one of Martine’s most beautiful and 
+                            longest gulf coastline, and enjoy a sprawling tropical 
+                            landscaping while stunning yourself along Montana’s most 
+                            private resort beachfront. Our caring and friendly colleagues 
+                            have genuine flair for good hospitality and proudly serve our 
+                            valued guests. The resort’s laid-back ambiance
+                            makes it an ideal haven for couples or honeymooners, while families adore 
+                            the range of facilities and tailored activities. 
                         </p>
-                        <a href="#" class="line-button">Learn More</a>
+                        <%--<a href="#" class="line-button">Learn More</a>--%>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-7">
@@ -101,7 +106,7 @@
     <!-- offers_area_end -->
 
     <!-- video_area_start -->
-    <div class="video_area video_bg overlay">
+   <%-- <div class="video_area video_bg overlay">
         <div class="video_area_inner text-center">
             <span>Montana Sea View</span>
             <h3>Relax and Enjoy your
@@ -111,7 +116,7 @@
                 <i class="fa fa-play"></i>
             </a>
         </div>
-    </div>
+    </div>--%>
     <!-- video_area_end -->
 
     <!-- about_area_start -->
@@ -137,11 +142,11 @@
                                 Delicious Food</h3>
                         </div>
                         <p>
-                            Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
-                            dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.
+                            Treat yourself to authentic Italian cuisine by 
+                            the beach at Peppina, or casual dining at Sakuna.
+                            Breezy bar at the hotel lobby also offers a variety of delicious bakeries and beverages.
                         </p>
-                        <a href="#" class="line-button">Learn More</a>
+                        <%--<a href="#" class="line-button">Learn More</a>--%>
                     </div>
                 </div>
             </div>
@@ -149,9 +154,20 @@
     </div>
     <!-- about_area_end -->
 
-    <!-- features_room_startt -->
-    
-           <%-- <div class="single_rooms">
+   <!-- features_room_startt -->
+    <%--<div class="features_room">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-100">
+                        <span>Featured Rooms</span>
+                        <h3>Choose a Better Room</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rooms_here">
+            <div class="single_rooms">
                 <div class="room_thumb">
                     <img src="../img/rooms/1.png" alt="">
                     <div class="room_heading d-flex justify-content-between align-items-center">
@@ -159,7 +175,7 @@
                             <span>From $250/night</span>
                             <h3>Superior Room</h3>
                         </div>
-                        <a href="Booking.aspx" class="line-button">book now</a>
+                        <a href="#" class="line-button">book now</a>
                     </div>
                 </div>
             </div>
@@ -198,9 +214,9 @@
                         <a href="#" class="line-button">book now</a>
                     </div>
                 </div>
-            </div>--%>
-        
-  
+            </div>
+        </div>
+    </div>--%>
     <!-- features_room_end -->
 
     <!-- forQuery_start -->

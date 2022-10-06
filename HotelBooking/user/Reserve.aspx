@@ -6,7 +6,7 @@
     <%--<section class="blog_area section-padding">--%>
     <div class="section-top-border">
         <div class="text-center">
-            <h3>Booking Detail</h3>
+            <h3>Booking Details</h3>
         </div>
         <br />
         <div class="container">
@@ -53,6 +53,7 @@
                                         <asp:BoundField DataField="No" HeaderText="No" />
                                         <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" />
                                         <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" />
+                                        <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" />
                                         <asp:BoundField DataField="Price" HeaderText="Price" />
                                         <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
                                     </Columns>

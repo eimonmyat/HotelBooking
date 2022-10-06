@@ -13,16 +13,17 @@
 
                     <tr>
                         <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RoomID">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RoomID" Width="100%">
                                 <Columns>
                                     <asp:BoundField DataField="No" HeaderText="No" />
                                     <asp:BoundField DataField="RoomID" HeaderText="RoomID" Visible="False" />
+                                    <asp:BoundField DataField="RoomNumber" HeaderText="Room Number" />
                                     <asp:BoundField DataField="RoomTypeName" HeaderText="Room Type" />
                                     <asp:BoundField DataField="Price" HeaderText="Price" />
                                     <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
-                                    <asp:TemplateField HeaderText="Change Quantity">
+                                    <asp:TemplateField HeaderText="Change Quantity" Visible="False">
                                         <ItemTemplate>
-                                            <asp:TextBox ID="txtNewQty" runat="server" Text='<%#Bind("Quantity")%>'></asp:TextBox>
+                                            <asp:TextBox ID="txtNewQty" Visible="false" runat="server" Text='<%#Bind("Quantity")%>'></asp:TextBox>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

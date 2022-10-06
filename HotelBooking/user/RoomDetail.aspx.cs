@@ -27,6 +27,7 @@ namespace HotelBooking.user
                     
                     imgRoom.ImageUrl = Dr["RoomImage"].ToString();
                     lblRoomType.Text = Dr["RoomTypeName"].ToString();
+                    lblRoomNumber.Text = Dr["RoomNumber"].ToString();
                     lblCapacity.Text = Dr["Capacity"].ToString();
                     lblPrice.Text = Dr["Price"].ToString();
                     lblDescription.Text = Dr["Description"].ToString();
@@ -53,10 +54,13 @@ namespace HotelBooking.user
             if (Session["TempTbl"] != null)
             {
                 Tbl = (DataTable)Session["TempTbl"];        // proid=1 and qty=1 
+                
+                
                 DataRow[] DrArray = Tbl.Select("RoomID='" + Session["RoomID"] + "'");
+
                 foreach (DataRow Dr in DrArray)
                 {
-                    Dr[1] = Convert.ToInt32(Dr[1]) + 1;//qty
+                    /*Dr[1] = Convert.ToInt32(Dr[1]) + 1;*///qty
                     Tbl.AcceptChanges();
                     Session["TempTbl"] = Tbl;
                     Response.Redirect("ReserveList.aspx");

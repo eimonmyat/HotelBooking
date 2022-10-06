@@ -4,9 +4,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="height: 14.08in">
         <div class="col-auto">
-            <div class="container-fluid">
+            <div style="height:95%">
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <br />
                 <asp:ObjectDataSource ID="DS_All" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="HotelBooking.MainDatasetTableAdapters.RoomTableAdapter"></asp:ObjectDataSource>
@@ -34,7 +34,7 @@
                 <div class="row justify-content-center">
                     <asp:MultiView ID="MultiView1" runat="server">
                         <asp:View ID="View1" runat="server">
-                            <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="900px">
+                            <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1250px" Height="100%" ExportContentDisposition="AlwaysInline">
                                 <LocalReport ReportPath="admin\Room.rdlc">
                                     <DataSources>
                                         <rsweb:ReportDataSource DataSourceId="DS_All" Name="DataSet1" />
@@ -43,7 +43,7 @@
                             </rsweb:ReportViewer>
                         </asp:View>
                         <asp:View ID="View2" runat="server">
-                            <rsweb:ReportViewer ID="ReportViewer2" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="900px">
+                            <rsweb:ReportViewer ID="ReportViewer2" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1250px" Height="100%">
                                 <LocalReport ReportPath="admin\Room.rdlc">
                                     <DataSources>
                                         <rsweb:ReportDataSource DataSourceId="DS_RoomNumber" Name="DataSet1" />

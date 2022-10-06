@@ -32,7 +32,7 @@
                     </td>
                     <td>
                         <asp:Button ID="btnPrint" runat="server" Text="Print" OnClick="btnPrint_Click" CssClass="genric-btn info radius"/>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        
                     </td>
                 </tr>
             </table>

@@ -18,17 +18,23 @@ namespace HotelBooking.user
 
         DataTable DtDisplay = new DataTable();
         DataRow Dr;
+        String aa;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
-            setRoomList();
+            
+                Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
+                setRoomList();
+           
+            
+                
+        }
+        protected void DisplayRoomType()
+        {
             ddlRoomType.DataTextField = "RoomTypeName";
             ddlRoomType.DataValueField = "RoomTypeID";
             ddlRoomType.DataSource = RoomTypeTbl.GetData();
             ddlRoomType.DataBind();
-                
         }
-
         protected void RoomNumberList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Session["RoomID"] = RoomNumberList.SelectedValue.ToString();
@@ -87,12 +93,7 @@ namespace HotelBooking.user
         protected void ddlRoomType_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtSearch.Enabled = false;
-            Dt1 = RoomTbl.GetDataBy4(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()), ddlRoomType.SelectedItem.ToString());
-            setRoomList();
-            ddlRoomType.DataTextField = "RoomTypeName";
-            ddlRoomType.DataValueField = "RoomTypeID";
-            ddlRoomType.DataSource = RoomTypeTbl.GetData();
-            ddlRoomType.DataBind();
+            //aa = ddlRoomType.SelectedItem.ToString();
         }
 
         protected void txtSearch_TextChanged(object sender, EventArgs e)
@@ -104,6 +105,22 @@ namespace HotelBooking.user
             ddlRoomType.DataValueField = "RoomTypeID";
             ddlRoomType.DataSource = RoomTypeTbl.GetData();
             ddlRoomType.DataBind();
+        }
+
+        protected void btnFilter_Click(object sender, EventArgs e)
+        {
+            Dt1 = RoomTbl.GetDataBy4(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()), ddlRoomType.SelectedItem.ToString());
+            setRoomList();
+            //ddlRoomType.DataTextField = "RoomTypeName";
+            //ddlRoomType.DataValueField = "RoomTypeID";
+            //ddlRoomType.DataSource = RoomTypeTbl.GetData();
+            //ddlRoomType.DataBind();
+            
+        }
+
+        protected void ddlRoomType_PreRender(object sender, EventArgs e)
+        {
+            DisplayRoomType();
         }
     }
 }

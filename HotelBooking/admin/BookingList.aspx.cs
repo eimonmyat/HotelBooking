@@ -144,7 +144,7 @@ namespace HotelBooking.admin
                 //Response.Redirect("BookingListReport.aspx");
             }
             Response.Redirect("BookingListReport.aspx");
-            Label1.Text = Session["Data"].ToString();
+            
         }
 
         protected void txtSearchData_TextChanged(object sender, EventArgs e)

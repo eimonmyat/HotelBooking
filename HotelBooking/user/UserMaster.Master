@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Mon</title>
+    <title>Montana</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,8 +61,8 @@
                         </div>
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                <a href="index.aspx">
+                                    <img src="../img/logo.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="slider_text text-center">
-                                <h3>Mon Resort</h3>
+                                <h3>Montana Resort</h3>
                                 <p>Unlock to enjoy the view of Martine</p>
                             </div>
                         </div>

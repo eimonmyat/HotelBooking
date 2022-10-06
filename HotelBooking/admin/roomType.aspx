@@ -3,11 +3,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="section-top-border">
+        
     <asp:MultiView ID="MultiView1" runat="server">
+
         <asp:View ID="View1" runat="server">
+            <div class="text-center">
+            <h3>ROOM TYPE LIST</h3>
+        </div>
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <table class="table">
+                        
+                        
                         <tr>
                             <td>
                                 <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
@@ -53,15 +61,20 @@
 
 
         <asp:View ID="View2" runat="server">
-            <div class="container">
-                <div class="form-new">
+            <div class="text-center">
+            <h3>ROOM TYPE ENTRY</h3>
+        </div>
+            <br />
+             <div class="row justify-content-center">
+                <div class="col-auto">
+                
                     <asp:Label ID="lblError2" runat="server" Text=""></asp:Label>
                     <asp:TextBox ID="txtRoomTypeID" runat="server" Visible="False"></asp:TextBox>
-                    <table style="color: #000000; border-width: medium; text-align: left;" class="table">
-                        <tr>
+                     <table class="table">
+                        <%--<tr>
                             <th colspan="2" style="text-align: center">Room Type Entry
                             </th>
-                        </tr>
+                        </tr>--%>
                         <tr>
                             <td>Room Type Name : 
                             </td>
@@ -82,13 +95,15 @@
                         <tr>
                             <td></td>
                             <td>
-                                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+                                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="genric-btn info radius"/>
                             </td>
                         </tr>
                     </table>
-                </div>
+                
 
             </div>
+                 </div>
         </asp:View>
     </asp:MultiView>
+        </div>
 </asp:Content>

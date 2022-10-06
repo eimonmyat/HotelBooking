@@ -16,7 +16,8 @@
                             <table class="table">
                                 <tr>
                                     <td colspan="5">
-                                        <h4>Select Filter</h4>
+                                        <asp:Label ID="Label1" runat="server" Text="Select Filter" Font-Bold="True" Font-Size="18px"></asp:Label>
+                                        <%--<h4>Select Filter</h4>--%>
                                     </td>
                                 </tr>
                                 <%--<tr>
@@ -34,7 +35,7 @@
                                         <h4>Filter By Room Type</h4>
                                         </td>
                                     <td style="text-align:left">
-                                        <asp:DropDownList ID="ddlRoomType" runat="server" CssClass="default-select" Width="150px" OnSelectedIndexChanged="ddlRoomType_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+                                        <asp:DropDownList ID="ddlRoomType" runat="server" CssClass="default-select" Width="150px" OnSelectedIndexChanged="ddlRoomType_SelectedIndexChanged" OnPreRender="ddlRoomType_PreRender" ></asp:DropDownList>
                                     </td>
                                     <td style="text-align:right">
                                         <h4>Filter By Price</h4>
@@ -42,7 +43,11 @@
                                     <td style="text-align:left">
                                         <asp:TextBox ID="txtSearch" runat="server" AutoPostBack="True" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
                                     </td>
-                                    
+                                    <td style="text-align:right">
+                                        <asp:Button ID="btnFilter" runat="server" Text="Filter" OnClick="btnFilter_Click" CssClass="genric-btn info radius"/>
+                                       
+                                    </td>
+
                                 </tr>
                             </table>
                         </div>

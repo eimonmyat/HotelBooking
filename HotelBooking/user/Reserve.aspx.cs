@@ -74,6 +74,7 @@ namespace HotelBooking.user
             DtDisplay.Columns.Add("No");//1
             DtDisplay.Columns.Add("RoomID");//8
             DtDisplay.Columns.Add("RoomTypeName");//Dell i5
+            DtDisplay.Columns.Add("RoomNumber");
             DtDisplay.Columns.Add("Price");//laptop
             
             
@@ -90,9 +91,9 @@ namespace HotelBooking.user
                 Dr[0] = Dt2.Rows[0][0];//0+1=1
                 Dr[1] = Dt2.Rows[0][1];//proid=8
                 Dr[2] = Dt2.Rows[0][4];//MSI
-
-                Dr[3] = Dt2.Rows[0][5];//1
-                Dr[4] = Dt1.Rows[i][1];
+                Dr[3] = Dt2.Rows[0][2]; 
+                Dr[4] = Dt2.Rows[0][5];//1
+                Dr[5] = Dt1.Rows[i][1];
                 DtDisplay.Rows.Add(Dr);
 
 
@@ -106,8 +107,8 @@ namespace HotelBooking.user
         {
             foreach (GridViewRow Row in GridView1.Rows)//no,proid,proname,catname,price,qty
             {
-                Price = Convert.ToInt32(Row.Cells[3].Text.ToString());
-                Qty = Convert.ToInt32(Row.Cells[4].Text.ToString());
+                Price = Convert.ToInt32(Row.Cells[4].Text.ToString());
+                Qty = Convert.ToInt32(Row.Cells[5].Text.ToString());
 
                 Total += Convert.ToInt32(Qty * Price);
             }

@@ -15,6 +15,8 @@ namespace HotelBooking.admin
         MainDatasetTableAdapters.RoomTableAdapter RoomTbl = new MainDatasetTableAdapters.RoomTableAdapter();
         MainDatasetTableAdapters.RoomTypeTableAdapter RoomTypeTbl = new MainDatasetTableAdapters.RoomTypeTableAdapter();
         DataTable Dt = new DataTable();
+        DataTable Dt2 = new DataTable();
+        DataTable Dt1 = new DataTable();
         DataTable DtDisplay = new DataTable();
         DataRow Dr;
         int Count;
@@ -116,6 +118,10 @@ namespace HotelBooking.admin
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            Dt2 = RoomTbl.Room_Select_By_SearchRoomTypeName(ddlRoomTypeName.SelectedItem.ToString());
+            int rowRoom = Dt2.Rows.Count;
+            Dt1=RoomTypeTbl.RoomType_Select_By_RoomTypeName(ddlRoomTypeName.SelectedItem.ToString());
+            int rowRoomType = Convert.ToInt32(Dt1.Rows[0][3].ToString());
             int ok;
 
             if (txtRoomNumber.Text.Trim().ToString() == string.Empty)
@@ -164,6 +170,12 @@ namespace HotelBooking.admin
             {
                 lblError2.Text = "Please Enter Description";
                 txtDescription.Focus();
+                MultiView1.ActiveViewIndex = 1;
+            }
+            else if (rowRoom >= rowRoomType)
+            {
+                lblError2.Text = "Room Quantity exceed";
+                ddlRoomTypeName.Focus();
                 MultiView1.ActiveViewIndex = 1;
             }
             else

@@ -10,7 +10,8 @@
 
     <div class="section-top-border">
         <div class="text-center">
-            <h3>Room Detail</h3>
+            <asp:Label ID="Label1" runat="server" Text="Room Detail" Font-Bold="True" Font-Size="28px" Font-Underline="True"></asp:Label>
+            <%--<h3>Room Detail</h3>--%>
         </div>
         <br />
         <div class="container">
@@ -28,9 +29,15 @@
                     <div class="text-center">
 
                         <h3>
-                            <asp:Label ID="lblRoomType" runat="server" Text="Label"></asp:Label></h3>
+                            <asp:Label ID="lblRoomType" runat="server" Text="Label" Font-Bold="True"></asp:Label></h3>
                     </div>
                     <table class="table">
+                        <tr>
+                            <td>Room Number:</td>
+                            <td>
+                                <asp:Label ID="lblRoomNumber" runat="server" Text="Label"></asp:Label>
+                            </td>
+                        </tr>
                         <tr>
                             <td>Capacity:</td>
                             <td>
