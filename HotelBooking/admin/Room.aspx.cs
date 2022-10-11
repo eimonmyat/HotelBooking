@@ -14,6 +14,7 @@ namespace HotelBooking.admin
        
         MainDatasetTableAdapters.RoomTableAdapter RoomTbl = new MainDatasetTableAdapters.RoomTableAdapter();
         MainDatasetTableAdapters.RoomTypeTableAdapter RoomTypeTbl = new MainDatasetTableAdapters.RoomTypeTableAdapter();
+        MainDatasetTableAdapters.BookingDetailTableAdapter BookingDetailTbl = new MainDatasetTableAdapters.BookingDetailTableAdapter();
         DataTable Dt = new DataTable();
         DataTable Dt2 = new DataTable();
         DataTable Dt1 = new DataTable();
@@ -180,7 +181,7 @@ namespace HotelBooking.admin
             }
             else
             {
-                Dt = RoomTbl.Room_Select_By_RoomNumberRoomTypeName(txtRoomNumber.Text, ddlRoomTypeName.SelectedItem.ToString());
+                Dt = RoomTbl.Room_Select_By_SearchRoomNumber(txtRoomNumber.Text);
                 if (Dt.Rows.Count > 0)
                 {
                     if (Dt.Rows[0][1].ToString() != txtRoomID.Text)
@@ -271,6 +272,9 @@ namespace HotelBooking.admin
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
+            int RoomID = Convert.ToInt32(txtRoomID.Text.ToString());
+            DataTable Dt3 = new DataTable();
+            Dt3 = BookingDetailTbl.GetDataBy1(RoomID);
             if (txtRoomID.Text.Trim().ToString() == string.Empty)
             {
                 lblError1.Text = "Please Choose One Record For Delete";
@@ -279,6 +283,10 @@ namespace HotelBooking.admin
             //{
             //    lblError1.Text = "This Product Have In Stock";
             //}
+            else if (Dt3.Rows.Count > 0)
+            {
+                lblError1.Text = "This room has booking";
+            }
             else
             {
                 string ImagePath = Server.MapPath(txtImage.Text);

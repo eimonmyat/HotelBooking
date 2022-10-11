@@ -11,6 +11,9 @@
             <div class="text-center">
             <h3>ROOM TYPE LIST</h3>
         </div>
+            <div align="center">
+                <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
+            </div>
             <br />
             <div class="row justify-content-center">
                 <div class="col-auto">
@@ -19,7 +22,7 @@
                         
                         <tr>
                             <td>--%>
-                                <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
+                                
                             <%--</td>
                         </tr>
                         <tr>

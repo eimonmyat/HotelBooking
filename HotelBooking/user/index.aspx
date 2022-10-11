@@ -16,7 +16,7 @@
                                 with Nature</h3>
                         </div>
                         <p>
-                            Spend your holiday on one of Martine’s most beautiful and 
+                            Spend your holiday on one of the most beautiful and 
                             longest gulf coastline, and enjoy a sprawling tropical 
                             landscaping while stunning yourself along Montana’s most 
                             private resort beachfront. Our caring and friendly colleagues 

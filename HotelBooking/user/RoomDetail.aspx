@@ -28,7 +28,7 @@
                 <div class="col-xl-5 col-lg-5">
                     <div class="text-center">
 
-                        
+                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                     </div>
                     <table class="table">
                          <tr>

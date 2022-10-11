@@ -17,7 +17,7 @@ namespace HotelBooking.user
         DataTable Dt = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Label6.Text = Session["RoomID"].ToString();
+            Label2.Text = Session["RoomID"].ToString();
             Dt = RoomTbl.Room_Select_By_RoomID(Convert.ToInt32(Session["RoomID"]));
             
             if (Dt.Rows.Count > 0)

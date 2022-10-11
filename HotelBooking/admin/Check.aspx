@@ -11,13 +11,16 @@
         <div class="text-center">
             <h3>Check Booking</h3>
         </div>
+        <div align="center">
+             <asp:Label ID="lblError" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
+        </div>
         <div class="row justify-content-center">
             <div class="col-auto">
                <%-- <table class="table">
                 
                  <tr>
                     <td class="auto-style1">--%>
-                        <asp:Label ID="lblError" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
+                       
                         </td>
                      <%--<td class="align-left">--%>
                         <asp:TextBox ID="txtBookingID" runat="server" AutoPostBack="True"></asp:TextBox>

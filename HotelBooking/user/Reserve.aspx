@@ -35,6 +35,7 @@
                     <div align="right">
                         Total Price :
                         <asp:TextBox ID="txtTotalPrice" runat="server" Enabled="False"></asp:TextBox>
+                        Ks
                                 <%--<asp:Label ID="lblTotalPrice" runat="server"></asp:Label>--%>
                     </div>
                                 

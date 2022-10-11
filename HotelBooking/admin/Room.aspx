@@ -9,13 +9,16 @@
             <div class="text-center">
             <h3>ROOM LIST</h3>
         </div>
+            <div align="center">
+                <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
+            </div>
             <br />
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <%--<table class="table">
                         <tr>
                             <td>--%>
-                                <asp:Label ID="lblError1" runat="server" Text="" Font-Size="10" ForeColor="#FF3300"></asp:Label>
+                                
                             <%--</td>
                         </tr>
                         <tr>
@@ -76,12 +79,12 @@
 
         <asp:View ID="View2" runat="server">
             <div class="text-center">
-            <h3>ROOM TYPE ENTRY</h3>
+            <h3>ROOM ENTRY</h3>
         </div>
             <br />
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <asp:Label ID="lblError2" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblError2" runat="server" Text="" ForeColor="Red"></asp:Label>
                     <asp:TextBox ID="txtRoomID" runat="server" Visible="False"></asp:TextBox>
                     <table class="table">
                         <%--<tr>

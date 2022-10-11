@@ -17,6 +17,7 @@
                                 <tr>
                                     <td colspan="5">
                                         <asp:Label ID="Label1" runat="server" Text="Select Filter" Font-Bold="True" Font-Size="18px"></asp:Label>
+                                        <asp:TextBox ID="TextBox1" runat="server" Visible="False"></asp:TextBox>
                                         <%--<h4>Select Filter</h4>--%>
                                     </td>
                                 </tr>

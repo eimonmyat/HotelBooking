@@ -21,9 +21,13 @@ namespace HotelBooking.user
         String aa;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (TextBox1.Text.ToString() == String.Empty)
+            {
                 Dt1 = RoomTbl.Room_Select_By_StartDateEndDate(Convert.ToDateTime(Session["StartDate"].ToString()), Convert.ToDateTime(Session["EndDate"].ToString()));
                 setRoomList();
+                TextBox1.Text = "Load";
+            }
+                
            
             
                 
@@ -93,6 +97,7 @@ namespace HotelBooking.user
         protected void ddlRoomType_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtSearch.Enabled = false;
+            //setRoomList();
             //aa = ddlRoomType.SelectedItem.ToString();
         }
 
